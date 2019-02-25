@@ -15,13 +15,13 @@ module Top (
 
 wire divisorToStateMachine;
 
-divdefreq  div0 (
+divdefreq #(1) div0 (
 .clk(clk),
 .reset(reset),
 .clkOut(divisorToStateMachine)
 );
 
-stateMachine sm0 (
+stateMachine  sm0 (
 .clk(divisorToStateMachine),
 .reset(reset),
 .start(start),
