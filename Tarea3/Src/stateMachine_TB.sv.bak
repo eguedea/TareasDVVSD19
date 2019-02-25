@@ -1,0 +1,51 @@
+//`timescale 1ns/1ps
+
+module stateMachine;
+
+ // Input Ports
+reg clk = 0;
+reg reset;
+reg Start;
+
+	
+// Output Ports 
+output logic out,
+output logic hzClk
+ 
+
+TareaBlinking
+#(
+	// Parameter Declarations
+	.FRECUENCY(FRECUENCY)
+)
+DUT
+(
+	// Input Ports
+	.clk(clk),
+	.reset(reset),
+	.Start(Start),
+
+	
+	// Output Ports
+	.Green(Green),
+	.Red(Red)
+);	
+
+/*********************************************************/
+initial // Clock generator
+  begin
+    forever #10 clk = !clk;
+  end
+/*********************************************************/
+initial begin // reset generator
+	#0 reset = 0;
+	#50 reset = 1;
+end
+
+/*********************************************************/
+initial begin // enable
+	#60 Start = 1;
+end/*********************************************************/
+
+
+endmodule
