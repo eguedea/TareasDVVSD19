@@ -2,7 +2,7 @@
 //Descripcion: Top para una maquina de parpadeos, basada en una maquina de estados 
 //Entrada: clock, reset, start.
 //Salida: out, salida a un Hz
-//Autor: Eric Guedea Osuna
+//Autor: Alberto Contreras Estrada, Eric Guedea Osuna
 //Fecha: 21/02/19
 
 module Top (
