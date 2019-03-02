@@ -1,3 +1,3 @@
-../src/Top.sv
+../Src/Top.sv
 
 stateMachine_TB.sv

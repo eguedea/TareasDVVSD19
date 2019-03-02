@@ -1,0 +1,39 @@
+module universal_reg #(
+parameter DW = 4
+) (
+input               clk,    // Clock
+input               rst,    // asynchronous reset low active 
+input               enb,    // Enable
+input               l_s,    // load or shift
+input  [DW-1:0]     inp,    // data input
+output              out     // Serial output
+);
+
+logic [DW-1:0]      rgstr_r;
+
+typedef enum logic [2:0] {
+   PIPO, PISOM, PISOL, SIPOLM, SIPOML, SISOL, SISOR
+} regs_t;
+
+regs_t reg_selector
+
+always_ff@(posedge clk or negedge rst) begin: rgstr_label
+	if(!rst)
+        rgstr_r  <= '0;
+	else if (enb) begin
+		case(reg_selector)
+			PIPO:  rgstr_r  <= inp;
+			PISO: begin
+				if (l_s)
+					rgstr_r  <= inp;
+				else 
+					rgstr_r  <= {rgstr_r[DW-2:0], rgstr_r[DW-1]};
+				end
+
+		endcase 
+	
+	end
+
+
+
+end: rgstr_labe
