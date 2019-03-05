@@ -43,7 +43,7 @@ always_ff@(posedge clk or negedge rst) begin: rgstr_label
 					 end
 			4:  begin 				//SIPOML
 				rgstr_r  <= {inp[0],  rgstr_r[DW-1:1]};
-				out <= rgstr_r;
+				out <= rgstr_r;		
 					 end
 			5: begin				//SISOL
 				rgstr_r  <= {rgstr_r[DW-2:0], inp[0]};
