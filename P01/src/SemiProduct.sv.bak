@@ -1,0 +1,46 @@
+module SemiProduct 
+#(parameter N = 4)
+(
+	input clk,
+	input rst,
+	input start,
+	input [N-1:0]Multiplier_Q,
+	input [N*2:0]Product,
+	
+	output [1:0]Q0_1,
+	output [N:1]Q,
+	output [N*2:N+1]A,
+	output [N-2:0]Out_N
+
+);
+reg [N-2:0]N_in;
+reg [N*2:0]Aux_N;
+	always_ff@(posedge clk or negedge rst) begin
+		if(rst == 1'b0)
+		begin 
+			N_in <= N;
+		end
+		else 	
+		begin
+			if(N_in==N && start==1) begin
+				Aux_N <= {{N{1'b0}},Multiplier_Q,1'b0};
+				N_in<=N_in-1;
+			end
+			else begin
+				if(N_in < N)begin
+					Aux_N <= Product;
+					N_in<=N_in-1;
+				end
+				if(N_in == 0)
+					N_in <= N;
+					Out_N <= N_in;
+			end
+		end
+	end		
+
+	
+assign Q0_1 = Aux_N[1:0];
+assign Q = Aux_N[N:1];
+assign A = Aux_N[N*2:N+1];
+assign Out_N = N_in;
+endmodule 

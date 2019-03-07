@@ -9,38 +9,69 @@ parameter DW = 4
 	output			ready,
 	output logic [(DW*2)-1:0] product
 );
-/*
-logic [DW-1:0] A = '0;
-logic [DW-1:0] Q = '0;
-logic Qm = '0;
-logic [DW-1:0] N = DW;
-logic [1:0] condition = 0;
-logic [(DW*2):0] datashift;
-
-assign Q = multipliers;
-
-//logic [(DW*2):0] data = {A,Q,Qm};
 
 
-always_ff@(posedge clk or negedge rst) begin: Multiplication
-	if(!rst)
-		product  <= '0;
-	else if(start) begin: Booth
-		condition <= data[1:0];
-		case(condition)
-			2'b00: begin
-				datashift <= data>>1;
-				data <= {data[(DW*2)],datashift[(DW*2):1]};
-				N <= N-1;
-				end
-		
-		endcase
-		
-		
-	end: Booth
 
-end: Multiplication
+	wire [DW-1:0] REGmultipliers;
+	wire [DW-1:0] REGmultiplicand;
+	wire [1:0] WireQ0_1;
+	wire [DW:1] WireQ;
+	wire [DW*2:DW+1] WireA;
+	wire [DW-2:0] WireOut_N;
+	wire [DW*2:0] WireProductToSemiProduct;
+	wire [DW*2-1:0] WireRegProductToPIPO;
+	wire ReadyToPIPO;
+	
+PIPO PP0(
+.clk	(clk),
+.rst	(rst),
+.enb	(start),
+.inp	(multiplicand),
+.out	(REGmultiplicand)
+);
 
-*/
+PIPO PP1(
+.clk	(clk),
+.rst	(rst),
+.enb	(start),
+.inp	(multipliers),
+.out	(REGmultipliers)
+);
+
+PIPO PP2(
+.clk	(clk),
+.rst	(rst),
+.enb	(readyToPIPO),
+.inp	(WireRegProductToPIPO),
+.out	(product)
+);
+
+SemiProduct SP0(
+.clk	(clk),
+.rst	(rst),
+.start	(start),
+.Multiplier_Q	(REGmultipliers),
+.Product	(WireProductToSemiProduct),
+.Q0_1	(WireQ0_1),
+.Q	(WireQ),
+.A	(WireA),
+.Out_N	(WireOut_N)
+);
+
+booth bth0(
+.clk	(clk),
+.rst	(rst),
+.start	(start),
+.Q(WireQ),
+.A(WireA),
+.M(REGmultiplicand),
+.Qm(WireQ0_1),
+.N(WireOut_N),
+.ready(readyToPIPO),
+.ready_f (ready),
+.product(WireProductToSemiProduct),
+.f_product(WireRegProductToPIPO)
+
+);
 endmodule
 

@@ -1,0 +1,24 @@
+`timescale 1ns / 1ps
+module booth_tb;
+
+					clk,
+					rst,
+					start,
+	 logic [DW-1:0]	Q,
+	 logic [DW-1:0] A,
+	 logic [DW-1:0] M,
+	 logic [1:0] Qm,
+	 logic [DW-1] N,
+	output			ready,
+	output logic [(DW*2)-1:0] product
+
+
+universal_reg uut(
+.clk    (clk    ),
+.rst    (rst    ),
+.enb    (enb    ),
+.l_s    (l_s    ),
+.inp    (inp    ),
+.reg_switch		(reg_switch		),
+.out    (out    )
+);

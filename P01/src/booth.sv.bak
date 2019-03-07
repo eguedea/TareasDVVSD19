@@ -1,0 +1,11 @@
+module booth #(
+parameter DW = 4
+) (
+	input 		   clk,
+	input				rst,
+	input				start,
+	input logic [DW-1:0] multiplicand,
+	input logic [DW-1:0] multipliers,
+	output			ready,
+	output logic [(DW*2)-1:0] product
+);
