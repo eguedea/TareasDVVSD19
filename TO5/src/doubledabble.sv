@@ -14,8 +14,8 @@ output logic [3:0] decout,
 output logic [3:0] uniout
 
 );
-logic ready = '0;
-logic [19:0] reservedSpace = '0;
+logic ready = 0;
+logic [19:0] reservedSpace = 0;
 
 always_ff@(posedge clk or negedge rst) begin
 	if(!rst) begin
@@ -26,16 +26,16 @@ always_ff@(posedge clk or negedge rst) begin
 
 	end else begin
 		if(reservedSpace[19:16] > 4'd4) begin
-				reservedSpace <= {reservedSpace[19:16] - 4'd3,reservedSpace[15:0]};
+				reservedSpace <= {reservedSpace[19:16] + 4'd3,reservedSpace[15:0]};
 				reservedSpace <= reservedSpace << 1;
 			end
 		 if(reservedSpace[15:12] > 4'd4) begin
-				reservedSpace <= {reservedSpace[19:16],reservedSpace[15:12] - 4'd3,reservedSpace[11:0]};
+				reservedSpace <= {reservedSpace[19:16],reservedSpace[15:12] + 4'd3,reservedSpace[11:0]};
 				reservedSpace <= reservedSpace << 1;
 
 			end
 		 if(reservedSpace[11:8] > 4'd4) begin
-				reservedSpace <= {reservedSpace[19:12], reservedSpace[11:8] - 4'd3, reservedSpace[7:0]};
+				reservedSpace <= {reservedSpace[19:12], reservedSpace[11:8] + 4'd3, reservedSpace[7:0]};
 				reservedSpace <= reservedSpace << 1;
 			end
 		reservedSpace <= reservedSpace << 1;

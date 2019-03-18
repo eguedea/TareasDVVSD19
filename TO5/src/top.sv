@@ -1,12 +1,19 @@
+//Nombre: top
+//Descripcion: 
+//Entrada:
+//Salida:
+//Autor: Alberto Contreras, Eric Guedea Osuna
+//Fecha: 17 de marzo del 2019
+
 module top(
 input logic [7:0] data,
-input clk,
-input rst,
-output [7:0] out[2:0],
-output sign
+input logic clk,
+input logic rst,
+output logic [7:0] out[2:0],
+output logic sign
 );
 
-wire TwoscomplementToDoubledabble;
+wire [7:0] TwoscomplementToDoubledabble;
 //wire [3:0] CentDoubledabbleToDecoder;
 //wire [3:0] DecDoubledabbleToDecoder;
 //wire [3:0] UniDoubledabbleToDecoder;

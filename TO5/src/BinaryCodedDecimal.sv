@@ -10,9 +10,9 @@ module BinaryCodedDecimal(
 	BCDOut
 );
 input [3:0] BCDIn;
-output [6:0] BCDOut;
+output logic [6:0] BCDOut;
 
-always_comb begin
+always@(BCDIn) begin
 case(BCDIn)
 	4'h0: BCDOut = 7'b1111110;
 	4'h1: BCDOut = 7'b0100000;
