@@ -1,0 +1,403 @@
+Partition Merge report for Multiplicador
+Mon Mar 11 18:10:34 2019
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Partition Statistics
+  5. Partition Merge Partition Pin Processing
+  6. Partition Merge Resource Usage Summary
+  7. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Partition Merge Summary                                                         ;
++------------------------------------+--------------------------------------------+
+; Partition Merge Status             ; Successful - Mon Mar 11 18:10:34 2019      ;
+; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                      ; Multiplicador                              ;
+; Top-level Entity Name              ; Multiplicador                              ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 84                                         ;
+;     Total combinational functions  ; 51                                         ;
+;     Dedicated logic registers      ; 63                                         ;
+; Total registers                    ; 63                                         ;
+; Total pins                         ; 52                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                               ;
++---------------------------------------------+-----+--------------------------------+
+; Statistic                                   ; Top ; hard_block:auto_generated_inst ;
++---------------------------------------------+-----+--------------------------------+
+; Estimated Total logic elements              ; 84  ; 0                              ;
+;                                             ;     ;                                ;
+; Total combinational functions               ; 51  ; 0                              ;
+; Logic element usage by number of LUT inputs ;     ;                                ;
+;     -- 4 input functions                    ; 11  ; 0                              ;
+;     -- 3 input functions                    ; 18  ; 0                              ;
+;     -- <=2 input functions                  ; 22  ; 0                              ;
+;                                             ;     ;                                ;
+; Logic elements by mode                      ;     ;                                ;
+;     -- normal mode                          ; 36  ; 0                              ;
+;     -- arithmetic mode                      ; 15  ; 0                              ;
+;                                             ;     ;                                ;
+; Total registers                             ; 63  ; 0                              ;
+;     -- Dedicated logic registers            ; 63  ; 0                              ;
+;     -- I/O registers                        ; 0   ; 0                              ;
+;                                             ;     ;                                ;
+; Virtual pins                                ; 0   ; 0                              ;
+; I/O pins                                    ; 52  ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0   ; 0                              ;
+; Total memory bits                           ; 0   ; 0                              ;
+; Total RAM block bits                        ; 0   ; 0                              ;
+;                                             ;     ;                                ;
+; Connections                                 ;     ;                                ;
+;     -- Input Connections                    ; 0   ; 0                              ;
+;     -- Registered Input Connections         ; 0   ; 0                              ;
+;     -- Output Connections                   ; 0   ; 0                              ;
+;     -- Registered Output Connections        ; 0   ; 0                              ;
+;                                             ;     ;                                ;
+; Internal Connections                        ;     ;                                ;
+;     -- Total Connections                    ; 473 ; 0                              ;
+;     -- Registered Connections               ; 202 ; 0                              ;
+;                                             ;     ;                                ;
+; External Connections                        ;     ;                                ;
+;     -- Top                                  ; 0   ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0   ; 0                              ;
+;                                             ;     ;                                ;
+; Partition Interface                         ;     ;                                ;
+;     -- Input Ports                          ; 19  ; 0                              ;
+;     -- Output Ports                         ; 33  ; 0                              ;
+;     -- Bidir Ports                          ; 0   ; 0                              ;
+;                                             ;     ;                                ;
+; Registered Ports                            ;     ;                                ;
+;     -- Registered Input Ports               ; 0   ; 0                              ;
+;     -- Registered Output Ports              ; 0   ; 0                              ;
+;                                             ;     ;                                ;
+; Port Connectivity                           ;     ;                                ;
+;     -- Input Ports driven by GND            ; 0   ; 0                              ;
+;     -- Output Ports driven by GND           ; 0   ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0   ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0   ; 0                              ;
+;     -- Input Ports with no Source           ; 0   ; 0                              ;
+;     -- Output Ports with no Source          ; 0   ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0   ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0   ; 0                              ;
++---------------------------------------------+-----+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++--------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                             ;
++---------------------------------+-----------+---------------+----------+-------------+
+; Name                            ; Partition ; Type          ; Location ; Status      ;
++---------------------------------+-----------+---------------+----------+-------------+
+; ProductoFinal[0]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[0]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[0]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[10]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[10]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[10]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[11]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[11]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[11]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[12]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[12]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[12]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[13]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[13]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[13]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[14]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[14]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[14]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[15]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[15]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[15]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[1]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[1]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[1]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[2]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[2]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[2]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[3]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[3]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[3]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[4]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[4]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[4]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[5]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[5]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[5]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[6]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[6]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[6]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[7]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[7]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[7]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[8]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[8]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[8]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ProductoFinal[9]                ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ProductoFinal[9]         ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ProductoFinal[9]~output  ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; clk                             ; Top       ; Input Port    ; n/a      ;             ;
+;     -- clk                      ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- clk~input                ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[0]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[0]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[0]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[1]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[1]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[1]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[2]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[2]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[2]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[3]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[3]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[3]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[4]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[4]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[4]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[5]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[5]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[5]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[6]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[6]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[6]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multiplicand[7]                 ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multiplicand[7]          ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multiplicand[7]~input    ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[0]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[0]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[0]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[1]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[1]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[1]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[2]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[2]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[2]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[3]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[3]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[3]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[4]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[4]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[4]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[5]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[5]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[5]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[6]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[6]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[6]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; multipliers[7]                  ; Top       ; Input Port    ; n/a      ;             ;
+;     -- multipliers[7]           ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- multipliers[7]~input     ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[0]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[0]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[0]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[10]                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[10]              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[10]~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[11]                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[11]              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[11]~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[12]                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[12]              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[12]~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[13]                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[13]              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[13]~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[14]                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[14]              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[14]~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[15]                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[15]              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[15]~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[1]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[1]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[1]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[2]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[2]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[2]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[3]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[3]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[3]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[4]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[4]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[4]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[5]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[5]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[5]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[6]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[6]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[6]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[7]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[7]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[7]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[8]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[8]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[8]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; product[9]                      ; Top       ; Output Port   ; n/a      ;             ;
+;     -- product[9]               ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- product[9]~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; ready                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- ready                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- ready~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; rst                             ; Top       ; Input Port    ; n/a      ;             ;
+;     -- rst                      ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- rst~input                ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
+; start                           ; Top       ; Input Port    ; n/a      ;             ;
+;     -- start                    ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- start~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                 ;           ;               ;          ;             ;
++---------------------------------+-----------+---------------+----------+-------------+
+
+
++---------------------------------------------------------+
+; Partition Merge Resource Usage Summary                  ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 84        ;
+;                                             ;           ;
+; Total combinational functions               ; 51        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 11        ;
+;     -- 3 input functions                    ; 18        ;
+;     -- <=2 input functions                  ; 22        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 36        ;
+;     -- arithmetic mode                      ; 15        ;
+;                                             ;           ;
+; Total registers                             ; 63        ;
+;     -- Dedicated logic registers            ; 63        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 52        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 63        ;
+; Total fan-out                               ; 473       ;
+; Average fan-out                             ; 2.17      ;
++---------------------------------------------+-----------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Partition Merge
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Mon Mar 11 18:10:33 2019
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off Multiplicador -c Multiplicador --merge=on
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus II software removes all the user-specified design partitions in the design automatically.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35002): Resolved and merged 1 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 85 logic cells
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Mon Mar 11 18:10:34 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

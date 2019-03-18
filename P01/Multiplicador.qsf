@@ -46,15 +46,59 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name SYSTEMVERILOG_FILE Multiplicador.sv
-set_global_assignment -name SYSTEMVERILOG_FILE StateMachine.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Counter.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE Booth.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Multiplicador_TB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE One_Shot.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PIPO.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/StateMachine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/PIPO.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Operation.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/One_Shot.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Multiplicador_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Multiplicador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Counter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Booth.sv
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_Y23 -to rst
+set_location_assignment PIN_M23 -to start
+set_location_assignment PIN_AB28 -to multipliers[0]
+set_location_assignment PIN_AC28 -to multipliers[1]
+set_location_assignment PIN_AC27 -to multipliers[2]
+set_location_assignment PIN_AD27 -to multipliers[3]
+set_location_assignment PIN_AB27 -to multipliers[4]
+set_location_assignment PIN_AC26 -to multipliers[5]
+set_location_assignment PIN_AD26 -to multipliers[6]
+set_location_assignment PIN_AB26 -to multipliers[7]
+set_location_assignment PIN_AC25 -to multiplicand[0]
+set_location_assignment PIN_AB25 -to multiplicand[1]
+set_location_assignment PIN_AC24 -to multiplicand[2]
+set_location_assignment PIN_AB24 -to multiplicand[3]
+set_location_assignment PIN_AB23 -to multiplicand[4]
+set_location_assignment PIN_AA24 -to multiplicand[5]
+set_location_assignment PIN_AA23 -to multiplicand[6]
+set_location_assignment PIN_AA22 -to multiplicand[7]
+set_location_assignment PIN_E21 -to ready
+set_location_assignment PIN_G19 -to product[0]
+set_location_assignment PIN_F19 -to product[1]
+set_location_assignment PIN_E19 -to product[2]
+set_location_assignment PIN_F21 -to product[3]
+set_location_assignment PIN_F18 -to product[4]
+set_location_assignment PIN_E18 -to product[5]
+set_location_assignment PIN_J19 -to product[6]
+set_location_assignment PIN_H19 -to product[7]
+set_location_assignment PIN_J17 -to product[8]
+set_location_assignment PIN_G17 -to product[9]
+set_location_assignment PIN_J15 -to product[10]
+set_location_assignment PIN_H16 -to product[11]
+set_location_assignment PIN_J16 -to product[12]
+set_location_assignment PIN_H17 -to product[13]
+set_location_assignment PIN_F15 -to product[14]
+set_location_assignment PIN_G15 -to product[15]
+set_location_assignment PIN_Y2 -to clk
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE tb/productTap.stp
+set_global_assignment -name SIGNALTAP_FILE tb/productTap.stp
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name SLD_FILE db/productTap_auto_stripped.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
