@@ -13,7 +13,7 @@ parameter DW_2 = 8
  output logic [(DW/2)-1:0] remainder,
  output logic ready
 );
-
+//this
 
 reg  [DW_2-1:0] Qm = 0;
 logic [DW_2-1:0] R = 0;
@@ -21,6 +21,7 @@ logic QmCtrl = 0;
 //logic  [DW-1:0] Dm = 0;
 
 //Internal Connection Wires
+logic Control_cable;
 logic [DW-1:0] fromASRtoAnd;
 logic [DW-1:0] OrExit;
 logic [DW_2-1:0] Restador_result;
@@ -37,15 +38,16 @@ if(reset == 1'b0) begin
 		
 		
 		if (load == 1'b0) begin
-			if(R>=0) begin
+			if(Control_cable) begin
 				R <= Restador_result;
-				QmCtrl = 1;
 			end else begin
 				R <= Sumador_result;
-				QmCtrl = 1;
+				QmCtrl <= 1;
 				end
-		if(QmCtrl)
+		if(QmCtrl) begin
 			Qm <= Qm_Out;
+			QmCtrl <= 0;
+		end
 			end
 		end
 	
@@ -53,6 +55,11 @@ end
 
 assign Q = Qm;
 assign remainder = R;
+
+control_mod CTRLMOD1 (
+.R	(R),
+.control	(Control_cable)
+);
 
 counted_asr ASR1 (
 .D	(D),
@@ -67,6 +74,7 @@ R_logic lgc1 (
 .OroutQ	(OrExit)
 );
 */
+
 restador RE1 (
 .A	(( (Qm<<2) | 3)),
 .B	(fromASRtoAnd),
