@@ -1,0 +1,13 @@
+module Suma 
+import Global::DW;
+(
+	input [DW-1:0]A,
+	input [DW-1:0]B, 
+	
+	output [DW-1:0]P
+
+);
+
+assign P = A+B;
+
+endmodule 

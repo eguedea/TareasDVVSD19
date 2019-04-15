@@ -1,0 +1,242 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vCounter
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 DXx4 work 6 Global 0 22 T3j4IikR303`58T0HOjcX2
+Z2 !s110 1555023100
+!i10b 1
+!s100 mciD9eoZocSGoWJMVXCZP2
+I6234>0T<1C83Le^DM;BFo0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Counter_sv_unit
+S1
+Z4 dC:/Users/Alberto/Documents/VerificacionProfe/Division
+w1554760735
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Counter.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Counter.sv
+L0 8
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1555023100.000000
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Counter.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@counter
+vDivision
+R0
+R1
+!s110 1555023101
+!i10b 1
+!s100 [<8iKMNGONnXzX_Zb=7D[2
+I7:8:Q^:Q<K;6RihNngD?n1
+R3
+!s105 Division_sv_unit
+S1
+R4
+w1555021871
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1555023101.000000
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division.sv|
+!i113 1
+R6
+R7
+n@division
+vDivision_Top
+R0
+R1
+Z8 !s110 1555023102
+!i10b 1
+!s100 MZWPj7iL78OU<>Bc0Qzm:2
+IAS>]Y1jTh@VEn]20WUBGV1
+R3
+!s105 Division_Top_sv_unit
+S1
+R4
+w1555023094
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z9 !s108 1555023102.000000
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top.sv|
+!i113 1
+R6
+R7
+n@division_@top
+vDivision_Top_TB
+R0
+R1
+R8
+!i10b 1
+!s100 Z7TY`ZmA3G;9cWcWE8SUA1
+IG@mg@?lZOeWf^QH7>fcKR2
+R3
+!s105 Division_Top_TB_sv_unit
+S1
+R4
+w1554929066
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top_TB.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top_TB.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top_TB.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Division_Top_TB.sv|
+!i113 1
+R6
+R7
+n@division_@top_@t@b
+XGlobal
+R0
+R8
+!i10b 1
+!s100 W`YZQCH>DKFbcg@nI5gaF1
+IT3j4IikR303`58T0HOjcX2
+VT3j4IikR303`58T0HOjcX2
+S1
+R4
+w1554328316
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Global.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Global.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Global.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Global.sv|
+!i113 1
+R6
+R7
+n@global
+vMux_Division
+R0
+R1
+R8
+!i10b 1
+!s100 21FK<WBc<PiiRkYnHZecg2
+Ickb>YVko5TE0?X[I>HDcc1
+R3
+!s105 Mux_Division_sv_unit
+S1
+R4
+w1555020475
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Mux_Division.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Mux_Division.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Mux_Division.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Mux_Division.sv|
+!i113 1
+R6
+R7
+n@mux_@division
+vResta
+R0
+R1
+R8
+!i10b 1
+!s100 LJogUmHf>[e1ofU`kd5KF0
+IDUhIdIX2Lh_h7TL^f`aGj3
+R3
+!s105 Resta_sv_unit
+S1
+R4
+w1555014505
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Resta.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Resta.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Resta.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Resta.sv|
+!i113 1
+R6
+R7
+n@resta
+vStateMachine
+R0
+R1
+R8
+!i10b 1
+!s100 ICO^cjOMRU8k5KOhmWNX51
+IZ3^5@O`K=`jC4P^MeCZTn3
+R3
+!s105 StateMachine_sv_unit
+S1
+R4
+w1552527088
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/StateMachine.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/StateMachine.sv
+L0 9
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/StateMachine.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/StateMachine.sv|
+!i113 1
+R6
+R7
+n@state@machine
+vSuma
+R0
+R1
+R2
+!i10b 1
+!s100 _:<zcl00HP@Y9hOl<2A9f0
+IhmIPDeEXUI?]1Ndg`kRGh0
+R3
+!s105 Suma_sv_unit
+S1
+R4
+w1554927919
+8C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Suma.sv
+FC:/Users/Alberto/Documents/VerificacionProfe/Division/src/Suma.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1555023099.000000
+!s107 C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Suma.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Alberto/Documents/VerificacionProfe/Division/src/Suma.sv|
+!i113 1
+R6
+R7
+n@suma
