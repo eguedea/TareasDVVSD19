@@ -1,0 +1,6 @@
+module uart_timer
+(
+	input bit_t clk,
+	input bit_t reset_timer,
+	output bit_t next_bit
+);

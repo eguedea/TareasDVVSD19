@@ -1,0 +1,11 @@
+module uart_reciever
+(
+input logic clk,
+input logic rst,
+input logic clear_interrupt,
+input logic serial_data_rx,
+output logic [7:0] recieved_data_rx,
+output logic rx_interrupt,
+output logic parity_error
+
+);

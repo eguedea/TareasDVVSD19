@@ -1,0 +1,10 @@
+module uart_parity_mod
+import DataTypes::*;
+(
+	input uint8_t data,
+	output bit_t parity
+);
+
+assign parity = (^data) ^ usingEvenParity;
+
+endmodule		

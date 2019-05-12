@@ -1,0 +1,8 @@
+module uart_transmitter
+(
+input logic clk,
+input logic rst,
+input logic enable,
+input logic [7:0] data
+
+)

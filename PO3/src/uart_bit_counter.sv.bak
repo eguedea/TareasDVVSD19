@@ -1,0 +1,14 @@
+module uart_bit_counter
+import DataType::*;
+(
+input bit_t clk,
+input bit_t reset,
+input bit_t incremet_bit_counter,
+input bit_t reset_bit_counter,
+output bit_t bit_counter
+
+);
+
+
+
+endmodule

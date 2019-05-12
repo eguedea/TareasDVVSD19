@@ -1,0 +1,18 @@
+module uart_tx_fsm
+(
+
+)
+
+
+
+
+
+
+
+
+
+typedef enum {IDLE, START, TRANSMIT, PARITY, STOP}
+
+
+
+endmodule

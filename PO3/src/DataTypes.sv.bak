@@ -1,0 +1,6 @@
+package DataTypes
+
+package DataTypes;
+	typedef logic [7:0] uint8_t:
+
+endpackage

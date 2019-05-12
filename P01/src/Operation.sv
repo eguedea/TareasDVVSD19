@@ -10,7 +10,7 @@ input start,
 input [1:0] Q_0,
 
 // Output Ports
-output [1:0] Qm
+output logic [1:0] Qm
 );
 
 always_comb 
