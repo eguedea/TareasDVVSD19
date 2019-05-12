@@ -13,7 +13,8 @@ import DataTypes::*;
 	output bit_t reset_bit_counter,
 	output bit_t shift_reg,
 	output bit_t load_reg,
-	output bit_t busy
+	output bit_t busy,
+	output bit_t idle_line
 	
 );
 
@@ -38,7 +39,7 @@ begin
 			end
 			COUNT: begin
 			  if(bit_counter)
-					txstates = WAIT;
+					txstates <= WAIT;
 				else if(next_bit)
 					txstates <= SHIFT;
 				
@@ -46,13 +47,13 @@ begin
 			end
 			SHIFT: begin
 				if(bit_counter)
-					txstates = WAIT;
+					txstates <= WAIT;
 				else
-					txstates = COUNT;
+					txstates <= COUNT;
 			end
 			WAIT: begin
 				if(!start)
-					txstates = IDLE;
+					txstates <= IDLE;
 				
 			
 			end		
@@ -67,6 +68,7 @@ always_comb begin
 		  shift_reg = '0;
 		  load_reg = '0;
 		  busy = '0;
+		  idle_line = '0;
 	case(txstates) 
 		IDLE:begin
 		  reset_timer = '1;
@@ -75,6 +77,7 @@ always_comb begin
 		  shift_reg = '0;
 		  load_reg = '0;
 		  busy = '0;
+		  idle_line = '1;
 		end
 		SETUP: begin
 		  reset_timer = '1;
@@ -91,7 +94,7 @@ always_comb begin
 		  shift_reg = '0;
 		  load_reg = '0;
 		  busy = '1;
-
+			
 			
 		
 		end
@@ -110,7 +113,8 @@ always_comb begin
 		  reset_bit_counter = '0;
 		  shift_reg = '0;
 		  load_reg = '0;
-		  busy = '0;			
+		  busy = '0;
+		  idle_line = '1;
 		
 		end
 		default: begin
@@ -119,7 +123,8 @@ always_comb begin
 		  reset_bit_counter = '0;
 		  shift_reg = '0;
 		  load_reg = '0;
-		  busy = '0;		
+		  busy = '0;	
+		  idle_line = '1;
 		end
 	
 	endcase

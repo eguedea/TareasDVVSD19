@@ -15,8 +15,8 @@ always_ff@(posedge clk or negedge reset)
 begin
 	if(!reset)
 	begin
-		counter = '0;
-		bit_counter = '0;
+		counter <= '0;
+		bit_counter <= '0;
 	end
 	else
 	begin
@@ -24,14 +24,14 @@ begin
 		
 			
 	   if(reset_bit_counter)
-			bit_counter = '0;
+			bit_counter <= '0;
 		else if(counter == bitspertx-1)
 		begin	
-			bit_counter = '1;
-			counter = '0;
+			bit_counter <= '1;
+			counter <= '0;
 		end
 		else if(increment_bit_counter)
-			counter = counter + 1'b1;
+			counter <= counter + 1;
 	end
 end
 

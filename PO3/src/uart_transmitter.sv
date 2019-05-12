@@ -22,6 +22,7 @@ bit_t load_reg_wire = '0;
 bit_t busy_wire = '0;
 bit_t parity = '0;
 bit_t shot_wire = '0;
+bit_t idle_line_wire = '0;
 
 One_Shot txshot
 (
@@ -42,7 +43,8 @@ uart_tx_fsm txfsm
 .reset_bit_counter (reset_bit_counter_wire),
 .shift_reg (shift_reg_wire),
 .load_reg	(load_reg_wire),
-.busy	(busy)
+.busy	(busy),
+.idle_line (idle_line_wire)
 
 );
 
@@ -76,11 +78,12 @@ piso_msb uartpiso
 .enb	(shift_reg_wire|load_reg_wire),
 .load	(load_reg_wire),
 .shift (shift_reg_wire),
-.inp ({1'b0,data,parity,1'b1}),
+.inp ({1'b0,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],parity}),
+.fsmReset	(idle_line_wire),
 .out (serial_output_rx)
 );
 
-
+//
 
 
 

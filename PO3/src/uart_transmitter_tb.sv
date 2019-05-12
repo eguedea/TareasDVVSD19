@@ -27,6 +27,8 @@ initial
 		#2 transmit = '1;
 		#4 transmit = '0;
 		#100000
+				data = 8'd0;
+
 		#2 transmit = 1;
 		#2 transmit = 0;
 	end
