@@ -15,15 +15,22 @@ logic [DW-1:0]      rgstr_r;
 
 always_ff@(posedge clk or negedge reset) begin: rgstr_label
     if(!reset)
-        rgstr_r  <= '1;
+        rgstr_r  <= '0;
 	 
-    else if (enb) begin
-        if (load)
-            rgstr_r  <= inp;
-        else if(shift)
-            rgstr_r  <= {rgstr_r[DW-2:0], 1'b1};
-    end
+    else begin
+			if (enb) begin
+			  if (load)
+					rgstr_r  <= inp;
+			  else if(shift)
+					rgstr_r  <= {rgstr_r[DW-2:0], 1'b1};
+			end 
+				
+	end
 end:rgstr_label
+
+
+
+//assign out  = rgstr_r[DW-1];
 
 always_comb
 begin

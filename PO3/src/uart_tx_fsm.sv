@@ -62,7 +62,7 @@ begin
 end
 
 always_comb begin
-		  reset_timer = '0;
+		  reset_timer = '1;
 		  increment_bit_counter = '0;
 		  reset_bit_counter = '0;
 		  shift_reg = '0;

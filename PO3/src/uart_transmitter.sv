@@ -79,7 +79,7 @@ piso_msb uartpiso
 .load	(load_reg_wire),
 .shift (shift_reg_wire),
 .inp ({1'b0,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],parity}),
-.fsmReset	(idle_line_wire),
+.fsmReset	(bit_counter_wire),
 .out (serial_output_rx)
 );
 

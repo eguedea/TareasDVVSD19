@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at piso_msb.sv(30): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at piso_msb.sv(37): always construct contains both blocking and non-blocking assignments
