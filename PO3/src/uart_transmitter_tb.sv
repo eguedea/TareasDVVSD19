@@ -16,7 +16,7 @@ uart_transmitter UUT
 initial
 	begin
 		clk = '0;
-		forever #2 clk = !clk; 
+		forever #0.5 clk = !clk; 
 	end
 
 initial
@@ -26,7 +26,9 @@ initial
 		data = 8'd324;
 		#2 transmit = '1;
 		#4 transmit = '0;
-		
+		#100000
+		#2 transmit = 1;
+		#2 transmit = 0;
 	end
 	
 endmodule

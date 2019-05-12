@@ -37,8 +37,11 @@ begin
 				txstates <= COUNT;
 			end
 			COUNT: begin
-				if(next_bit)
+			  if(bit_counter)
+					txstates = WAIT;
+				else if(next_bit)
 					txstates <= SHIFT;
+				
 			
 			end
 			SHIFT: begin

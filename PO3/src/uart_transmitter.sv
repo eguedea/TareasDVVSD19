@@ -21,12 +21,20 @@ bit_t shift_reg_wire = '0;
 bit_t load_reg_wire = '0;
 bit_t busy_wire = '0;
 bit_t parity = '0;
+bit_t shot_wire = '0;
+
+One_Shot txshot
+(
+.*,
+.Start (transmit),
+.Shot	(shot_wire)
+);
 
 uart_tx_fsm txfsm
 (
 .clk	(clk),
 .reset (reset),
-.start	(transmit),
+.start	(shot_wire),
 .next_bit (next_bit_wire),
 .bit_counter (bit_counter_wire),
 .reset_timer (reset_timer_wire),

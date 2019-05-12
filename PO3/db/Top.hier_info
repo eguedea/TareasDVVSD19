@@ -1,13 +1,15 @@
 |uart_transmitter
+clk => One_Shot:txshot.clk
 clk => uart_tx_fsm:txfsm.clk
 clk => uart_timer:rxtimer.clk
 clk => uart_bit_counter:rxbitcounter.clk
 clk => piso_msb:uartpiso.clk
+reset => One_Shot:txshot.reset
 reset => uart_tx_fsm:txfsm.reset
 reset => uart_timer:rxtimer.reset
 reset => uart_bit_counter:rxbitcounter.reset
 reset => piso_msb:uartpiso.reset
-transmit => uart_tx_fsm:txfsm.start
+transmit => One_Shot:txshot.Start
 data[0] => uart_parity_mod:uartparitygen.data[0]
 data[0] => piso_msb:uartpiso.inp[2]
 data[1] => uart_parity_mod:uartparitygen.data[1]
@@ -23,9 +25,17 @@ data[5] => piso_msb:uartpiso.inp[7]
 data[6] => uart_parity_mod:uartparitygen.data[6]
 data[6] => piso_msb:uartpiso.inp[8]
 data[7] => uart_parity_mod:uartparitygen.data[7]
-data[7] => piso_msb:uartpiso.inp[9]
-serial_output_rx << piso_msb:uartpiso.out
-busy << uart_tx_fsm:txfsm.busy
+serial_output_rx <= piso_msb:uartpiso.out
+busy <= uart_tx_fsm:txfsm.busy
+
+
+|uart_transmitter|One_Shot:txshot
+clk => state~2.DATAIN
+reset => state~4.DATAIN
+Start => state.DATAB
+Start => Selector1.IN2
+Start => Selector0.IN1
+Shot <= Shot.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |uart_transmitter|uart_tx_fsm:txfsm
@@ -158,6 +168,38 @@ next_bit => txstates.OUTPUTSELECT
 next_bit => txstates.OUTPUTSELECT
 next_bit => txstates.OUTPUTSELECT
 next_bit => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
+bit_counter => txstates.OUTPUTSELECT
 bit_counter => Selector29.IN9
 bit_counter => Selector30.IN3
 reset_timer <= reset_timer.DB_MAX_OUTPUT_PORT_TYPE
@@ -190,15 +232,15 @@ reset => counter[7].ACLR
 reset => counter[8].ACLR
 reset => next_bit~reg0.ACLR
 reset_timer => next_bit.OUTPUTSELECT
-reset_timer => counter[0].ENA
-reset_timer => counter[8].ENA
-reset_timer => counter[7].ENA
-reset_timer => counter[6].ENA
-reset_timer => counter[5].ENA
-reset_timer => counter[4].ENA
-reset_timer => counter[3].ENA
-reset_timer => counter[2].ENA
-reset_timer => counter[1].ENA
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
+reset_timer => counter.OUTPUTSELECT
 next_bit <= next_bit~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -218,10 +260,10 @@ increment_bit_counter => counter.OUTPUTSELECT
 increment_bit_counter => counter.OUTPUTSELECT
 increment_bit_counter => counter.OUTPUTSELECT
 reset_bit_counter => bit_counter.OUTPUTSELECT
-reset_bit_counter => counter.OUTPUTSELECT
-reset_bit_counter => counter.OUTPUTSELECT
-reset_bit_counter => counter.OUTPUTSELECT
-reset_bit_counter => counter.OUTPUTSELECT
+reset_bit_counter => counter[3].ENA
+reset_bit_counter => counter[2].ENA
+reset_bit_counter => counter[1].ENA
+reset_bit_counter => counter[0].ENA
 bit_counter <= bit_counter~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -247,7 +289,6 @@ clk => rgstr_r[5].CLK
 clk => rgstr_r[6].CLK
 clk => rgstr_r[7].CLK
 clk => rgstr_r[8].CLK
-clk => rgstr_r[9].CLK
 reset => rgstr_r[0].PRESET
 reset => rgstr_r[1].PRESET
 reset => rgstr_r[2].PRESET
@@ -257,9 +298,7 @@ reset => rgstr_r[5].PRESET
 reset => rgstr_r[6].PRESET
 reset => rgstr_r[7].PRESET
 reset => rgstr_r[8].PRESET
-reset => rgstr_r[9].PRESET
 enb => rgstr_r[0].ENA
-enb => rgstr_r[9].ENA
 enb => rgstr_r[8].ENA
 enb => rgstr_r[7].ENA
 enb => rgstr_r[6].ENA
@@ -277,8 +316,6 @@ load => rgstr_r.OUTPUTSELECT
 load => rgstr_r.OUTPUTSELECT
 load => rgstr_r.OUTPUTSELECT
 load => rgstr_r.OUTPUTSELECT
-load => rgstr_r.OUTPUTSELECT
-shift => rgstr_r.OUTPUTSELECT
 shift => rgstr_r.OUTPUTSELECT
 shift => rgstr_r.OUTPUTSELECT
 shift => rgstr_r.OUTPUTSELECT
@@ -297,7 +334,6 @@ inp[5] => rgstr_r.DATAB
 inp[6] => rgstr_r.DATAB
 inp[7] => rgstr_r.DATAB
 inp[8] => rgstr_r.DATAB
-inp[9] => rgstr_r.DATAB
-out <= rgstr_r[9].DB_MAX_OUTPUT_PORT_TYPE
+out <= rgstr_r[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
