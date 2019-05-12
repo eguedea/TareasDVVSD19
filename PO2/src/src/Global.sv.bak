@@ -1,0 +1,10 @@
+package Global;
+
+	typedef enum  logic [1:0]{
+					IDLE,
+					SETUP,
+					PROCESS,
+					READY
+					} State;
+					
+endmodule // global

@@ -1,0 +1,21 @@
+module Suma 
+import Global::DW;
+(
+	input logic [DW-1:0]A,
+	input	logic [DW-1:0]B, 
+	input logic Signo,
+	
+	output logic [DW-1:0]P
+
+);
+reg [DW-1:0] P_Aux;
+always_comb begin 
+	if(Signo)
+		P_Aux = A+B;
+	else
+		P_Aux = A-B;
+
+end
+assign P = P_Aux;
+
+endmodule 

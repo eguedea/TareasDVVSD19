@@ -1,0 +1,95 @@
+C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Suma.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Suma.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Suma
+-- Importing package Global
+
+Top level modules:
+	Suma
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Multiplicador_TB.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Multiplicador_TB.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Multiplicador_TB
+-- Importing package Global
+
+Top level modules:
+	Multiplicador_TB
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/StateMachine.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/StateMachine.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module StateMachine
+-- Importing package Global
+
+Top level modules:
+	StateMachine
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/One_Shot.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/One_Shot.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module One_Shot
+
+Top level modules:
+	One_Shot
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Resta.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Resta.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Resta
+-- Importing package Global
+
+Top level modules:
+	Resta
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Counter.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Counter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Counter
+-- Importing package Global
+
+Top level modules:
+	Counter
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/PIPO.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/PIPO.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module PIPO
+-- Importing package Global
+
+Top level modules:
+	PIPO
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Multiplicador.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Multiplicador.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Multiplicador
+-- Importing package Global
+
+Top level modules:
+	Multiplicador
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/PIPO_2.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/PIPO_2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module PIPO_2
+-- Importing package Global
+
+Top level modules:
+	PIPO_2
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/booth.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/booth.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Booth
+-- Importing package Global
+
+Top level modules:
+	Booth
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Multiplicador_PLL.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Multiplicador_PLL.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Multiplicador_PLL
+-- Importing package Global
+
+Top level modules:
+	Multiplicador_PLL
+
+} {} {}} C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Global.sv {1 {vlog -work work -sv -stats=none C:/Users/Alberto/Documents/VerificacionGit/TareasDVVSD19/P02/src/Global.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling package Global
+
+Top level modules:
+	--none--
+
+} {} {}}

@@ -1,0 +1,74 @@
+module Division 
+import Global::*;
+(
+// Input Ports
+input clk,
+input reset,
+input load,
+input ready,
+input [DW-1:0] Dividendo,
+input [DW-1:0] M, //Divisor
+
+// Output Ports
+output logic [DW-1:0] Cosiente,Residuo
+);
+
+wire logic Qm;
+logic OperacionAux;
+logic [DW_2-1:0]Operacion,A;
+wire logic [DW-1:0]Wire_Qm;
+
+
+
+
+always_ff@(posedge clk or negedge reset) begin
+	if(reset == 1'b0) 
+	begin
+		OperacionAux <= 1'b0;
+		//A1 <= 5'b0000;
+		Operacion <= 8'b00000000;
+	end
+	else 
+	begin
+		if (load == 1'b0)
+		begin
+			Operacion <= {{DW{1'b0}},Dividendo};
+		end
+		else begin
+			if (ready==0)begin
+					OperacionAux <= 1'b1;
+					Operacion <= A<<<1;		
+			end else
+				OperacionAux <= 1'b0;
+		end
+	end
+end
+assign Cosiente = A[DW-1:0];
+assign Residuo = A[DW_2-1:DW];
+
+Suma Resta
+(
+	.A(Operacion[DW_2-1:DW]),
+	.B(M),
+	.Aux(OperacionAux),
+	.Signo(1'b0),
+	.P(Wire_Qm),
+	.Qm(Qm)
+
+);
+
+
+Mux_Division Mux
+(
+	.A({Wire_Qm,Operacion[DW-1:1],1'b0}),
+	.Wire_Qm(Wire_Qm),
+	.M(M),
+	.Sel(Qm),
+	.P(A)
+
+
+
+);
+endmodule
+
+

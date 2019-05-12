@@ -1,0 +1,13 @@
+
+State Machine - |Multiplicador|StateMachine:Unidad_Control|State
+Name State.READY State.PROCESS State.SETUP State.IDLE 
+State.IDLE 0 0 0 0 
+State.SETUP 0 0 1 1 
+State.PROCESS 0 1 0 1 
+State.READY 1 0 0 1 
+
+State Machine - |Multiplicador|One_Shot:Start|state
+Name state.Waiting_Shot state.Waiting_Not_Shot state.Shot_State 
+state.Waiting_Shot 0 0 0 
+state.Shot_State 1 0 1 
+state.Waiting_Not_Shot 1 1 0 
