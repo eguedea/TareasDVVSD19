@@ -26,8 +26,8 @@ data[6] => uart_parity_mod:uartparitygen.data[6]
 data[6] => piso_msb:uartpiso.inp[2]
 data[7] => uart_parity_mod:uartparitygen.data[7]
 data[7] => piso_msb:uartpiso.inp[1]
-serial_output_rx <= piso_msb:uartpiso.out
-busy <= uart_tx_fsm:txfsm.busy
+serial_output_rx << piso_msb:uartpiso.out
+busy << uart_tx_fsm:txfsm.busy
 
 
 |uart_transmitter|One_Shot:txshot
