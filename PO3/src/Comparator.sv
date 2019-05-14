@@ -6,7 +6,7 @@ import DataTypes::*;
 	input [ADDR_WIDTH-1:0] value,
 	input [ADDR_WIDTH-1:0] compare_value,
 //Outputs
-	output compare_flag
+	output bit_t compare_flag
 );
 //Variables a utilizar
 bit_t flag=0;

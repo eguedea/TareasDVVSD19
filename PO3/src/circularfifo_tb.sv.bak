@@ -1,0 +1,19 @@
+module circularfifo;
+import DataTypes::*;
+
+ bit_t uart_clk;
+ bit_t processor_clk;
+ bit_t reset;
+ fifo_in datainput;
+ bit_t push;
+ bit_t pop;
+ fifo_out dataoutput;
+ bit_t full;
+ bit_t empty;
+ 
+ circularfifo UUT
+ (
+ .*
+ )
+ 
+ 

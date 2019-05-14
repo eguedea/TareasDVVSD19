@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29I7
-set_global_assignment -name TOP_LEVEL_ENTITY processorToUartComp
+set_global_assignment -name TOP_LEVEL_ENTITY circularfifo
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:40:56  MAY 05, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
@@ -65,10 +65,6 @@ set_location_assignment PIN_M21 -to reset
 set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_G9 -to serial_output_rx
 set_location_assignment PIN_R24 -to transmit
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE src/simple_dual_port_ram_dual_clock.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/One_Shot.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/piso_msb.sv
@@ -92,3 +88,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/readpointers.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/uartToProcessorComp.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/Comparator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/processorToUartComp.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE src/circularfifo_tb.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

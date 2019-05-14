@@ -1,16 +1,16 @@
 module processorToUartComp
 import DataTypes::*;
 (
-input bit_t r_add,
+input ADDR_W r_add,
 input bit_t uart_clk,
-input ADDR_W w_add,
 input bit_t reset,
+input ADDR_W w_add,
 output bit_t comp_full
 );
 
-bit_t bin2grayToFF_wire;
-bit_t FFToGray2bin_wire;
-bit_t gray2binToComp_wire;
+ADDR_W bin2grayToFF_wire;
+ADDR_W FFToGray2bin_wire;
+ADDR_W gray2binToComp_wire;
 
 binToGray bin2gray2
 (

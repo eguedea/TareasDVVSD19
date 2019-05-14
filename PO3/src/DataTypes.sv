@@ -10,15 +10,15 @@ package DataTypes;
 	parameter DW_fifo = 8;
 	typedef logic [DW_fifo-1:0] fifo_in;
 	typedef logic [DW_fifo-1:0] fifo_out;
-	//POINTER PARameters
-	typedef logic [3:0] RAM_size;
 	//RAM PARAMETERS//
 	parameter DATA_WIDTH=8; 
-	parameter ADDR_WIDTH=3;
+	parameter ADDR_WIDTH=4;
 	typedef logic [ADDR_WIDTH-1:0] ADDR_W; 
 	typedef logic [DATA_WIDTH-1:0] DATA_W;
 	//Converter parameters
-	
+		//POINTER PARameters
+
+	typedef logic [ADDR_WIDTH-1:0] RAM_size;
 
 	///UART TIMER AND TIMING
 	parameter bit_timing = (50000000/115200);

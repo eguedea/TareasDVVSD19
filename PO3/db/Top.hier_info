@@ -1,15 +1,157 @@
-|processorToUartComp
-r_add => r_add.IN1
-uart_clk => uart_clk.IN1
+|circularfifo
+uart_clk => uart_clk.IN2
+processor_clk => processor_clk.IN2
+reset => reset.IN4
+datainput[0] => datainput[0].IN1
+datainput[1] => datainput[1].IN1
+datainput[2] => datainput[2].IN1
+datainput[3] => datainput[3].IN1
+datainput[4] => datainput[4].IN1
+datainput[5] => datainput[5].IN1
+datainput[6] => datainput[6].IN1
+datainput[7] => datainput[7].IN1
+push => push.IN1
+pop => pop.IN1
+dataoutput[0] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[1] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[2] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[3] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[4] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[5] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[6] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+dataoutput[7] << simple_dual_port_ram_dual_clock:RAM1.ram_out
+full << processorToUartComp:ptuc1.comp_full
+empty << uartToProcessorComp:utpc1.comp_empty
+
+
+|circularfifo|simple_dual_port_ram_dual_clock:RAM1
+clk_w => ram.we_a.CLK
+clk_w => ram.waddr_a[1].CLK
+clk_w => ram.waddr_a[0].CLK
+clk_w => ram.data_a[7].CLK
+clk_w => ram.data_a[6].CLK
+clk_w => ram.data_a[5].CLK
+clk_w => ram.data_a[4].CLK
+clk_w => ram.data_a[3].CLK
+clk_w => ram.data_a[2].CLK
+clk_w => ram.data_a[1].CLK
+clk_w => ram.data_a[0].CLK
+clk_w => ram.CLK0
+clk_r => ram_out[0]~reg0.CLK
+clk_r => ram_out[1]~reg0.CLK
+clk_r => ram_out[2]~reg0.CLK
+clk_r => ram_out[3]~reg0.CLK
+clk_r => ram_out[4]~reg0.CLK
+clk_r => ram_out[5]~reg0.CLK
+clk_r => ram_out[6]~reg0.CLK
+clk_r => ram_out[7]~reg0.CLK
+en_w => ram.we_a.DATAIN
+en_w => ram.WE
+en_r => ram_out[0]~reg0.ENA
+en_r => ram_out[1]~reg0.ENA
+en_r => ram_out[2]~reg0.ENA
+en_r => ram_out[3]~reg0.ENA
+en_r => ram_out[4]~reg0.ENA
+en_r => ram_out[5]~reg0.ENA
+en_r => ram_out[6]~reg0.ENA
+en_r => ram_out[7]~reg0.ENA
+data[0] => ram.data_a[0].DATAIN
+data[0] => ram.DATAIN
+data[1] => ram.data_a[1].DATAIN
+data[1] => ram.DATAIN1
+data[2] => ram.data_a[2].DATAIN
+data[2] => ram.DATAIN2
+data[3] => ram.data_a[3].DATAIN
+data[3] => ram.DATAIN3
+data[4] => ram.data_a[4].DATAIN
+data[4] => ram.DATAIN4
+data[5] => ram.data_a[5].DATAIN
+data[5] => ram.DATAIN5
+data[6] => ram.data_a[6].DATAIN
+data[6] => ram.DATAIN6
+data[7] => ram.data_a[7].DATAIN
+data[7] => ram.DATAIN7
+read_addr[0] => ram.RADDR
+read_addr[1] => ram.RADDR1
+read_addr[2] => ~NO_FANOUT~
+read_addr[3] => ~NO_FANOUT~
+write_addr[0] => ram.waddr_a[0].DATAIN
+write_addr[0] => ram.WADDR
+write_addr[1] => ram.waddr_a[1].DATAIN
+write_addr[1] => ram.WADDR1
+write_addr[2] => ~NO_FANOUT~
+write_addr[3] => ~NO_FANOUT~
+ram_out[0] <= ram_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[1] <= ram_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[2] <= ram_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[3] <= ram_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[4] <= ram_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[5] <= ram_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[6] <= ram_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ram_out[7] <= ram_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|pointers:wpointers
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => w_en~reg0.CLK
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => w_en~reg0.ACLR
+push => w_en~reg0.DATAIN
+push => counter[0].ENA
+push => counter[3].ENA
+push => counter[2].ENA
+push => counter[1].ENA
+w_add[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+w_add[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+w_add[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+w_add[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+w_en <= w_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|readpointers:rpointers
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => r_en~reg0.CLK
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => r_en~reg0.ACLR
+pop => r_en~reg0.DATAIN
+pop => counter[0].ENA
+pop => counter[3].ENA
+pop => counter[2].ENA
+pop => counter[1].ENA
+r_add[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+r_add[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+r_add[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+r_add[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+r_en <= r_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|uartToProcessorComp:utpc1
 w_add[0] => w_add[0].IN1
 w_add[1] => w_add[1].IN1
 w_add[2] => w_add[2].IN1
 w_add[3] => w_add[3].IN1
+processor_clk => processor_clk.IN1
 reset => reset.IN1
-comp_full <= Comparator:comp2.compare_flag
+r_add[0] => r_add[0].IN1
+r_add[1] => r_add[1].IN1
+r_add[2] => r_add[2].IN1
+r_add[3] => r_add[3].IN1
+comp_empty <= Comparator:comp1.compare_flag
 
 
-|processorToUartComp|binToGray:bin2gray2
+|circularfifo|uartToProcessorComp:utpc1|binToGray:bin2gray
 bin[0] => gray.IN0
 bin[1] => gray.IN0
 bin[1] => gray.IN1
@@ -23,28 +165,28 @@ gray[2] <= gray.DB_MAX_OUTPUT_PORT_TYPE
 gray[3] <= bin[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processorToUartComp|dualFF:FF2
+|circularfifo|uartToProcessorComp:utpc1|dualFF:FF1
 clk => clk.IN2
 reset => reset.IN2
 D => D.IN1
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processorToUartComp|dualFF:FF2|flipflop:ff1
+|circularfifo|uartToProcessorComp:utpc1|dualFF:FF1|flipflop:ff1
 clk => Q~reg0.CLK
 reset => ~NO_FANOUT~
 D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processorToUartComp|dualFF:FF2|flipflop:ff2
+|circularfifo|uartToProcessorComp:utpc1|dualFF:FF1|flipflop:ff2
 clk => Q~reg0.CLK
 reset => ~NO_FANOUT~
 D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processorToUartComp|grayToBin:gray2bin2
+|circularfifo|uartToProcessorComp:utpc1|grayToBin:gray2bin
 gray[0] => WideXor0.IN0
 gray[1] => WideXor0.IN1
 gray[1] => WideXor1.IN0
@@ -61,7 +203,82 @@ bin[2] <= WideXor2.DB_MAX_OUTPUT_PORT_TYPE
 bin[3] <= gray[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|processorToUartComp|Comparator:comp2
+|circularfifo|uartToProcessorComp:utpc1|Comparator:comp1
+value[0] => Equal0.IN3
+value[1] => Equal0.IN2
+value[2] => Equal0.IN1
+value[3] => Equal0.IN0
+compare_value[0] => Equal0.IN7
+compare_value[1] => Equal0.IN6
+compare_value[2] => Equal0.IN5
+compare_value[3] => Equal0.IN4
+compare_flag <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|processorToUartComp:ptuc1
+r_add => r_add.IN1
+uart_clk => uart_clk.IN1
+reset => reset.IN1
+w_add[0] => w_add[0].IN1
+w_add[1] => w_add[1].IN1
+w_add[2] => w_add[2].IN1
+w_add[3] => w_add[3].IN1
+comp_full <= Comparator:comp2.compare_flag
+
+
+|circularfifo|processorToUartComp:ptuc1|binToGray:bin2gray2
+bin[0] => gray.IN0
+bin[1] => gray.IN0
+bin[1] => gray.IN1
+bin[2] => gray.IN0
+bin[2] => gray.IN1
+bin[3] => gray.IN1
+bin[3] => gray[3].DATAIN
+gray[0] <= gray.DB_MAX_OUTPUT_PORT_TYPE
+gray[1] <= gray.DB_MAX_OUTPUT_PORT_TYPE
+gray[2] <= gray.DB_MAX_OUTPUT_PORT_TYPE
+gray[3] <= bin[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|processorToUartComp:ptuc1|dualFF:FF2
+clk => clk.IN2
+reset => reset.IN2
+D => D.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|processorToUartComp:ptuc1|dualFF:FF2|flipflop:ff1
+clk => Q~reg0.CLK
+reset => ~NO_FANOUT~
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|processorToUartComp:ptuc1|dualFF:FF2|flipflop:ff2
+clk => Q~reg0.CLK
+reset => ~NO_FANOUT~
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|processorToUartComp:ptuc1|grayToBin:gray2bin2
+gray[0] => WideXor0.IN0
+gray[1] => WideXor0.IN1
+gray[1] => WideXor1.IN0
+gray[2] => WideXor0.IN2
+gray[2] => WideXor1.IN1
+gray[2] => WideXor2.IN0
+gray[3] => WideXor0.IN3
+gray[3] => WideXor1.IN2
+gray[3] => WideXor2.IN1
+gray[3] => bin[3].DATAIN
+bin[0] <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+bin[1] <= WideXor1.DB_MAX_OUTPUT_PORT_TYPE
+bin[2] <= WideXor2.DB_MAX_OUTPUT_PORT_TYPE
+bin[3] <= gray[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circularfifo|processorToUartComp:ptuc1|Comparator:comp2
 value[0] => Equal0.IN3
 value[1] => Equal0.IN2
 value[2] => Equal0.IN1

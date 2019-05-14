@@ -3,13 +3,16 @@ import DataTypes::*;
 (
 input bit_t clk,
 input bit_t reset,
-input bit_t D,
-output bit_t Q
+input ADDR_W D,
+output ADDR_W Q
 );
 
-always_ff@(posedge clk)
+always_ff@(posedge clk or negedge reset)
 begin
-	Q <= D;
+	if(!reset)
+		Q <= '0;
+	else
+		Q <= D;
 end
 
 endmodule

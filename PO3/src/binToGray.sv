@@ -1,8 +1,8 @@
 module binToGray
 import DataTypes::*;
 (
-input logic [ADDR_WIDTH-1:0] bin,
-output logic [ADDR_WIDTH-1:0] gray 
+input  ADDR_W bin,
+output ADDR_W gray 
 );
 
 assign gray[ADDR_WIDTH-1] = bin[ADDR_WIDTH-1];

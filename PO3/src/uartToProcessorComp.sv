@@ -3,14 +3,14 @@ import DataTypes::*;
 (
 input ADDR_W w_add,
 input bit_t processor_clk,
-input reset,
+input bit_t reset,
 input ADDR_W r_add,
-output comp_empty
+output  bit_t comp_empty
 );
 
-bit_t bin2grayToFF_wire;
-bit_t FFToGray2bin_wire;
-bit_t gray2binToComp_wire;
+ADDR_W bin2grayToFF_wire;
+ADDR_W FFToGray2bin_wire;
+ADDR_W gray2binToComp_wire;
 
 binToGray bin2gray
 (

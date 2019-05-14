@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Top
-Tue May 14 13:05:31 2019
+Analysis & Elaboration report for Top
+Tue May 14 14:37:19 2019
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -7,20 +7,22 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "Comparator:comp2"
- 10. Port Connectivity Checks: "grayToBin:gray2bin2"
- 11. Port Connectivity Checks: "binToGray:bin2gray2"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "processorToUartComp:ptuc1|Comparator:comp2"
+  6. Port Connectivity Checks: "processorToUartComp:ptuc1|grayToBin:gray2bin2"
+  7. Port Connectivity Checks: "processorToUartComp:ptuc1|binToGray:bin2gray2"
+  8. Port Connectivity Checks: "processorToUartComp:ptuc1"
+  9. Port Connectivity Checks: "uartToProcessorComp:utpc1|Comparator:comp1"
+ 10. Port Connectivity Checks: "uartToProcessorComp:utpc1|grayToBin:gray2bin"
+ 11. Port Connectivity Checks: "uartToProcessorComp:utpc1|binToGray:bin2gray"
+ 12. Port Connectivity Checks: "uartToProcessorComp:utpc1"
+ 13. Port Connectivity Checks: "readpointers:rpointers"
+ 14. Port Connectivity Checks: "pointers:wpointers"
+ 15. Port Connectivity Checks: "simple_dual_port_ram_dual_clock:RAM1"
+ 16. Analysis & Elaboration Messages
+ 17. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -45,110 +47,23 @@ agreement for further details.
 
 
 +---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
+; Analysis & Elaboration Summary                                                  ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 14 13:05:31 2019      ;
+; Analysis & Elaboration Status      ; Successful - Tue May 14 14:37:19 2019      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; Top                                        ;
-; Top-level Entity Name              ; processorToUartComp                        ;
+; Top-level Entity Name              ; circularfifo                               ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 5                                          ;
-;     Total combinational functions  ; 2                                          ;
-;     Dedicated logic registers      ; 3                                          ;
-; Total registers                    ; 3                                          ;
-; Total pins                         ; 8                                          ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                         ;
-+----------------------------------------------------------------------------+---------------------+--------------------+
-; Option                                                                     ; Setting             ; Default Value      ;
-+----------------------------------------------------------------------------+---------------------+--------------------+
-; Device                                                                     ; EP4CE115F29I7       ;                    ;
-; Top-level entity name                                                      ; processorToUartComp ; Top                ;
-; Family name                                                                ; Cyclone IV E        ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                 ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                 ;
-; Enable compact report table                                                ; Off                 ; Off                ;
-; Restructure Multiplexers                                                   ; Auto                ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                ;
-; Preserve fewer node names                                                  ; On                  ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                ;
-; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto                ; Auto               ;
-; Safe State Machine                                                         ; Off                 ; Off                ;
-; Extract Verilog State Machines                                             ; On                  ; On                 ;
-; Extract VHDL State Machines                                                ; On                  ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                 ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                  ; On                 ;
-; Parallel Synthesis                                                         ; On                  ; On                 ;
-; DSP Block Balancing                                                        ; Auto                ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                  ; On                 ;
-; Power-Up Don't Care                                                        ; On                  ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                 ; Off                ;
-; Remove Duplicate Registers                                                 ; On                  ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                 ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                 ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                 ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                  ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                ;
-; Optimization Technique                                                     ; Balanced            ; Balanced           ;
-; Carry Chain Length                                                         ; 70                  ; 70                 ;
-; Auto Carry Chains                                                          ; On                  ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                  ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                ;
-; Auto ROM Replacement                                                       ; On                  ; On                 ;
-; Auto RAM Replacement                                                       ; On                  ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                  ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto                ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                  ; On                 ;
-; Strict RAM Replacement                                                     ; Off                 ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                  ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                  ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                ;
-; Auto Resource Sharing                                                      ; Off                 ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                  ; On                 ;
-; Report Parameter Settings                                                  ; On                  ; On                 ;
-; Report Source Assignments                                                  ; On                  ; On                 ;
-; Report Connectivity Checks                                                 ; On                  ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                   ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation  ; Normal compilation ;
-; HDL message level                                                          ; Level2              ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                 ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                ;
-; Clock MUX Protection                                                       ; On                  ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                 ; Off                ;
-; Block Design Naming                                                        ; Auto                ; Auto               ;
-; SDC constraint protection                                                  ; Off                 ; Off                ;
-; Synthesis Effort                                                           ; Auto                ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                 ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium              ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                  ; On                 ;
-; Synthesis Seed                                                             ; 1                   ; 1                  ;
-+----------------------------------------------------------------------------+---------------------+--------------------+
 
 
 +------------------------------------------+
@@ -168,84 +83,95 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
-; src/DataTypes.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/DataTypes.sv           ;         ;
-; src/grayToBin.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/grayToBin.sv           ;         ;
-; src/binToGray.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/binToGray.sv           ;         ;
-; src/flipflop.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/flipflop.sv            ;         ;
-; src/dualFF.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/dualFF.sv              ;         ;
-; src/Comparator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/Comparator.sv          ;         ;
-; src/processorToUartComp.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/src/processorToUartComp.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 5              ;
-;                                             ;                ;
-; Total combinational functions               ; 2              ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 1              ;
-;     -- 3 input functions                    ; 0              ;
-;     -- <=2 input functions                  ; 1              ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2              ;
-;     -- arithmetic mode                      ; 0              ;
-;                                             ;                ;
-; Total registers                             ; 3              ;
-;     -- Dedicated logic registers            ; 3              ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 8              ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; uart_clk~input ;
-; Maximum fan-out                             ; 3              ;
-; Total fan-out                               ; 22             ;
-; Average fan-out                             ; 1.05           ;
-+---------------------------------------------+----------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
-; |processorToUartComp       ; 2 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |processorToUartComp                         ; work         ;
-;    |Comparator:comp2|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processorToUartComp|Comparator:comp2        ; work         ;
-;    |dualFF:FF2|            ; 0 (0)             ; 3 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processorToUartComp|dualFF:FF2              ; work         ;
-;       |flipflop:ff1|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processorToUartComp|dualFF:FF2|flipflop:ff1 ; work         ;
-;       |flipflop:ff2|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processorToUartComp|dualFF:FF2|flipflop:ff2 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 3     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29I7      ;                    ;
+; Top-level entity name                                                      ; circularfifo       ; Top                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Comparator:comp2"                                                                                                                                             ;
+; Port Connectivity Checks: "processorToUartComp:ptuc1|Comparator:comp2"                                                                                                                   ;
 +---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port          ; Type  ; Severity ; Details                                                                                                                                               ;
 +---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -254,7 +180,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "grayToBin:gray2bin2"                                                                                                                         ;
+; Port Connectivity Checks: "processorToUartComp:ptuc1|grayToBin:gray2bin2"                                                                                               ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                      ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -264,7 +190,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "binToGray:bin2gray2"                                                                                                                        ;
+; Port Connectivity Checks: "processorToUartComp:ptuc1|binToGray:bin2gray2"                                                                                              ;
 +------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                     ;
 +------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -273,43 +199,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 8                           ;
-; cycloneiii_ff         ; 3                           ;
-;     CLR               ; 1                           ;
-;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
-;         2 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.08                        ;
-+-----------------------+-----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processorToUartComp:ptuc1"                                                                                                                    ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                       ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; w_add ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "w_add[3..1]" will be connected to GND. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uartToProcessorComp:utpc1|Comparator:comp1"                                                                                                                   ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                               ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; compare_value ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "compare_value[3..1]" will be connected to GND. ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uartToProcessorComp:utpc1|grayToBin:gray2bin"                                                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; gray ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "gray[3..1]" will be connected to GND. ;
+; bin  ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "bin[3..1]" have no fanouts                       ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uartToProcessorComp:utpc1|binToGray:bin2gray"                                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; gray ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "gray[3..1]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uartToProcessorComp:utpc1"                                                                                                                    ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                       ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; w_add ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "w_add[3..1]" will be connected to GND. ;
+; r_add ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "r_add[3..1]" will be connected to GND. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "readpointers:rpointers"                                                                                                   ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; r_add ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "r_add[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pointers:wpointers"                                                                                                       ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; w_add ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "w_add[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simple_dual_port_ram_dual_clock:RAM1"                                                                                                                   ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                            ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; read_addr  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "read_addr[3..1]" will be connected to GND.  ;
+; write_addr ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "write_addr[3..1]" will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue May 14 13:05:19 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica3MxV -c Top
+    Info: Processing started: Tue May 14 14:37:08 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica3MxV -c Top --analysis_and_elaboration
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file src/simple_dual_port_ram_dual_clock.sv
+    Info (12023): Found entity 1: simple_dual_port_ram_dual_clock
 Info (12021): Found 1 design units, including 1 entities, in source file src/one_shot.sv
     Info (12023): Found entity 1: One_Shot
 Info (12021): Found 1 design units, including 1 entities, in source file src/piso_msb.sv
@@ -355,31 +330,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/com
     Info (12023): Found entity 1: Comparator
 Info (12021): Found 1 design units, including 1 entities, in source file src/processortouartcomp.sv
     Info (12023): Found entity 1: processorToUartComp
-Info (12127): Elaborating entity "processorToUartComp" for the top level hierarchy
-Info (12128): Elaborating entity "binToGray" for hierarchy "binToGray:bin2gray2"
-Info (12128): Elaborating entity "dualFF" for hierarchy "dualFF:FF2"
-Info (12128): Elaborating entity "flipflop" for hierarchy "dualFF:FF2|flipflop:ff1"
-Info (12128): Elaborating entity "grayToBin" for hierarchy "grayToBin:gray2bin2"
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp2"
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (286030): Timing-Driven Synthesis is running
+Warning (10229): Verilog HDL Expression warning at circularfifo_tb.sv(35): truncated literal to match 8 bits
+Warning (10229): Verilog HDL Expression warning at circularfifo_tb.sv(39): truncated literal to match 8 bits
+Warning (10229): Verilog HDL Expression warning at circularfifo_tb.sv(43): truncated literal to match 8 bits
+Warning (10229): Verilog HDL Expression warning at circularfifo_tb.sv(47): truncated literal to match 8 bits
+Info (12021): Found 1 design units, including 1 entities, in source file src/circularfifo_tb.sv
+    Info (12023): Found entity 1: circularfifo_tb
+Warning (10236): Verilog HDL Implicit Net warning at circularfifo.sv(34): created implicit net for "clk_uart"
+Warning (10236): Verilog HDL Implicit Net warning at circularfifo.sv(43): created implicit net for "clk_processor"
+Info (12127): Elaborating entity "circularfifo" for the top level hierarchy
+Info (12128): Elaborating entity "simple_dual_port_ram_dual_clock" for hierarchy "simple_dual_port_ram_dual_clock:RAM1"
+Info (12128): Elaborating entity "pointers" for hierarchy "pointers:wpointers"
+Warning (10230): Verilog HDL assignment warning at pointers.sv(25): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "readpointers" for hierarchy "readpointers:rpointers"
+Info (12128): Elaborating entity "uartToProcessorComp" for hierarchy "uartToProcessorComp:utpc1"
+Info (12128): Elaborating entity "binToGray" for hierarchy "uartToProcessorComp:utpc1|binToGray:bin2gray"
+Info (12128): Elaborating entity "dualFF" for hierarchy "uartToProcessorComp:utpc1|dualFF:FF1"
+Info (12128): Elaborating entity "flipflop" for hierarchy "uartToProcessorComp:utpc1|dualFF:FF1|flipflop:ff1"
+Info (12128): Elaborating entity "grayToBin" for hierarchy "uartToProcessorComp:utpc1|grayToBin:gray2bin"
+Info (12128): Elaborating entity "Comparator" for hierarchy "uartToProcessorComp:utpc1|Comparator:comp1"
+Info (12128): Elaborating entity "processorToUartComp" for hierarchy "processorToUartComp:ptuc1"
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/output_files/Top.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4813 megabytes
-    Info: Processing ended: Tue May 14 13:05:31 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:29
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4754 megabytes
+    Info: Processing ended: Tue May 14 14:37:19 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/output_files/Top.map.smsg.
 
 

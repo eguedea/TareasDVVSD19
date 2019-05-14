@@ -22,7 +22,7 @@ begin
 		if(pop)
 		begin
 			r_en = '1;
-			counter = counter - 1'b1;
+			counter = counter + 1'b1;
 		end
 		else
 			r_en = '0;

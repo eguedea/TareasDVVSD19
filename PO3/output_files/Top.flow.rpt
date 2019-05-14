@@ -1,5 +1,5 @@
 Flow report for Top
-Tue May 14 13:05:31 2019
+Tue May 14 14:37:19 2019
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue May 14 13:05:31 2019      ;
+; Flow Status                        ; Successful - Tue May 14 14:37:19 2019      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; Top                                        ;
-; Top-level Entity Name              ; processorToUartComp                        ;
+; Top-level Entity Name              ; circularfifo                               ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29I7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 5                                          ;
-;     Total combinational functions  ; 2                                          ;
-;     Dedicated logic registers      ; 3                                          ;
-; Total registers                    ; 3                                          ;
-; Total pins                         ; 8                                          ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -65,56 +65,56 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/14/2019 13:05:20 ;
+; Start date & time ; 05/14/2019 14:37:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top                 ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                   ;
-+-------------------------------------+---------------------------------------+---------------+---------------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name         ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+---------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 35490513643188.155785711910416        ; --            ; --                  ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --                  ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --                  ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 100                                   ; --            ; --                  ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                                   ; --            ; --                  ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --                  ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; processorToUartComp ; --             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; processorToUartComp ; --             ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; processorToUartComp ; --             ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --                  ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                  ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --                  ; --             ;
-; TOP_LEVEL_ENTITY                    ; processorToUartComp                   ; Top           ; --                  ; --             ;
-+-------------------------------------+---------------------------------------+---------------+---------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+---------------------------------------+---------------+--------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name  ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+--------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 35490513643188.155786262816828        ; --            ; --           ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --           ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --           ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                   ; --            ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                   ; --            ; --           ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --           ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; circularfifo ; --             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; circularfifo ; --             ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; circularfifo ; --             ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --           ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --           ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --           ; --             ;
+; TOP_LEVEL_ENTITY                    ; circularfifo                          ; Top           ; --           ; --             ;
++-------------------------------------+---------------------------------------+---------------+--------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4813 MB             ; 00:00:29                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:29                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4754 MB             ; 00:00:27                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:27                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-UV8NHLB  ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++-------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                     ;
++------------------------+------------------+-----------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++------------------------+------------------+-----------+------------+----------------+
+; Analysis & Elaboration ; DESKTOP-UV8NHLB  ; Windows 7 ; 6.2        ; x86_64         ;
++------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Practica3MxV -c Top
+quartus_map --read_settings_files=on --write_settings_files=off Practica3MxV -c Top --analysis_and_elaboration
 
 
 

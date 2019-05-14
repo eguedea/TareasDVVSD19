@@ -3,12 +3,12 @@ import DataTypes::*;
 (
 input bit_t clk,
 input bit_t reset,
-input bit_t D,
-output bit_t Q
+input ADDR_W D,
+output ADDR_W Q
 );
 
-bit_t Q1_wire;
-bit_t Q2_wire;
+ADDR_W Q1_wire;
+ADDR_W Q2_wire;
 
 always_ff@(posedge clk or negedge reset)
 begin
