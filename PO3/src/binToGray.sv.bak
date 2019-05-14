@@ -1,0 +1,6 @@
+module binToGray
+import DataTypes::*;
+(
+input logic [ADDR_WIDTH-1:0] bin,
+output logic [ADDR_WIDTH-1:0] gray 
+);

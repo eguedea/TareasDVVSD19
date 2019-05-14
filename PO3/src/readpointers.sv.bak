@@ -1,0 +1,9 @@
+module readpointers
+import DataTypes;;*
+(
+input bit_t clk,
+input bit_t reset,
+input bit_t pop,
+output RAM_size w_add,
+output bit_t w_en
+)

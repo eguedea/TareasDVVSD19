@@ -1,0 +1,12 @@
+module uartToProcessorComp
+import DataTypes::*;
+(
+input bit_t w_add,
+input bit_t processor_clk,
+input bit_t r_add,
+output comp_empty
+);
+
+bit_t bin2grayToFF_wire;
+bin_t FFToGray2bin_wire;
+bin_t gray2binToComp_wire;

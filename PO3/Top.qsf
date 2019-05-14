@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29I7
-set_global_assignment -name TOP_LEVEL_ENTITY uart_transmitter
+set_global_assignment -name TOP_LEVEL_ENTITY processorToUartComp
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:40:56  MAY 05, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
@@ -52,9 +52,6 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_AD5 -to data[7]
 set_location_assignment PIN_AD26 -to data[6]
@@ -68,6 +65,11 @@ set_location_assignment PIN_M21 -to reset
 set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_G9 -to serial_output_rx
 set_location_assignment PIN_R24 -to transmit
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE src/simple_dual_port_ram_dual_clock.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/One_Shot.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/piso_msb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/uart_timer_tb.sv
@@ -80,14 +82,13 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/uart_timer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/uart_bit_counter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/uart_parity_mod.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/uart_transmitter_tb.sv
-set_global_assignment -name CDF_FILE output_files/Chain4.cdf
-set_global_assignment -name CDF_FILE output_files/Chain5.cdf
-set_global_assignment -name CDF_FILE output_files/Chain7.cdf
-set_global_assignment -name CDF_FILE output_files/Chain9.cdf
-set_global_assignment -name CDF_FILE output_files/Chain10.cdf
-set_global_assignment -name CDF_FILE output_files/Chain11.cdf
-set_global_assignment -name CDF_FILE output_files/Chain17.cdf
-set_global_assignment -name CDF_FILE output_files/Chain20.cdf
-set_global_assignment -name CDF_FILE output_files/Chain21.cdf
-set_global_assignment -name CDF_FILE output_files/Chain22.cdf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE src/grayToBin.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/binToGray.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/flipflop.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/dualFF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/circularfifo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/pointers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/readpointers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/uartToProcessorComp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/Comparator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/processorToUartComp.sv
