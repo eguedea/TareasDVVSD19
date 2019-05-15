@@ -1,9 +1,9 @@
 module uartToProcessorComp
 import DataTypes::*;
 (
-input ADDR_W w_add,
 input bit_t processor_clk,
 input bit_t reset,
+input ADDR_W w_add,
 input ADDR_W r_add,
 output  bit_t comp_empty
 );

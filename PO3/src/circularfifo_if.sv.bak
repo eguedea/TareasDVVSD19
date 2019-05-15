@@ -1,0 +1,2 @@
+interface circularfifo_if ();
+import DataTypes::*;

@@ -21,8 +21,17 @@ begin
 	begin
 		if(pop)
 		begin
-			r_en = '1;
-			counter = counter + 1'b1;
+			if(counter == maxramsize - 1)
+			begin
+				r_en = '1;
+				counter = '0;
+			end
+			else
+			begin
+				r_en = '1;
+				counter = counter + 1'b1;
+			end
+			
 		end
 		else
 			r_en = '0;

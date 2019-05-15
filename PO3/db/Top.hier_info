@@ -1,7 +1,7 @@
 |circularfifo
-uart_clk => uart_clk.IN2
-processor_clk => processor_clk.IN2
-reset => reset.IN4
+uart_clk => uart_clk.IN3
+processor_clk => processor_clk.IN3
+reset => reset.IN5
 datainput[0] => datainput[0].IN1
 datainput[1] => datainput[1].IN1
 datainput[2] => datainput[2].IN1
@@ -81,6 +81,7 @@ write_addr[1] => ram.waddr_a[1].DATAIN
 write_addr[1] => ram.WADDR1
 write_addr[2] => ~NO_FANOUT~
 write_addr[3] => ~NO_FANOUT~
+reset => ~NO_FANOUT~
 ram_out[0] <= ram_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ram_out[1] <= ram_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ram_out[2] <= ram_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -168,38 +169,63 @@ gray[3] <= bin[3].DB_MAX_OUTPUT_PORT_TYPE
 |circularfifo|uartToProcessorComp:utpc1|dualFF:FF1
 clk => clk.IN2
 reset => reset.IN2
-D => D.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|uartToProcessorComp:utpc1|dualFF:FF1|flipflop:ff1
-clk => Q~reg0.CLK
-reset => ~NO_FANOUT~
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|uartToProcessorComp:utpc1|dualFF:FF1|flipflop:ff2
-clk => Q~reg0.CLK
-reset => ~NO_FANOUT~
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|uartToProcessorComp:utpc1|grayToBin:gray2bin
-gray[0] => WideXor0.IN0
-gray[1] => WideXor0.IN1
-gray[1] => WideXor1.IN0
-gray[2] => WideXor0.IN2
-gray[2] => WideXor1.IN1
-gray[2] => WideXor2.IN0
-gray[3] => WideXor0.IN3
-gray[3] => WideXor1.IN2
-gray[3] => WideXor2.IN1
+gray[0] => bin.IN1
+gray[1] => bin.IN1
+gray[2] => bin.IN0
+gray[3] => bin.IN1
 gray[3] => bin[3].DATAIN
-bin[0] <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
-bin[1] <= WideXor1.DB_MAX_OUTPUT_PORT_TYPE
-bin[2] <= WideXor2.DB_MAX_OUTPUT_PORT_TYPE
+bin[0] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+bin[1] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+bin[2] <= bin.DB_MAX_OUTPUT_PORT_TYPE
 bin[3] <= gray[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -216,7 +242,10 @@ compare_flag <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|processorToUartComp:ptuc1
-r_add => r_add.IN1
+r_add[0] => r_add[0].IN1
+r_add[1] => r_add[1].IN1
+r_add[2] => r_add[2].IN1
+r_add[3] => r_add[3].IN1
 uart_clk => uart_clk.IN1
 reset => reset.IN1
 w_add[0] => w_add[0].IN1
@@ -243,38 +272,63 @@ gray[3] <= bin[3].DB_MAX_OUTPUT_PORT_TYPE
 |circularfifo|processorToUartComp:ptuc1|dualFF:FF2
 clk => clk.IN2
 reset => reset.IN2
-D => D.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|processorToUartComp:ptuc1|dualFF:FF2|flipflop:ff1
-clk => Q~reg0.CLK
-reset => ~NO_FANOUT~
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|processorToUartComp:ptuc1|dualFF:FF2|flipflop:ff2
-clk => Q~reg0.CLK
-reset => ~NO_FANOUT~
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circularfifo|processorToUartComp:ptuc1|grayToBin:gray2bin2
-gray[0] => WideXor0.IN0
-gray[1] => WideXor0.IN1
-gray[1] => WideXor1.IN0
-gray[2] => WideXor0.IN2
-gray[2] => WideXor1.IN1
-gray[2] => WideXor2.IN0
-gray[3] => WideXor0.IN3
-gray[3] => WideXor1.IN2
-gray[3] => WideXor2.IN1
+gray[0] => bin.IN1
+gray[1] => bin.IN1
+gray[2] => bin.IN0
+gray[3] => bin.IN1
 gray[3] => bin[3].DATAIN
-bin[0] <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
-bin[1] <= WideXor1.DB_MAX_OUTPUT_PORT_TYPE
-bin[2] <= WideXor2.DB_MAX_OUTPUT_PORT_TYPE
+bin[0] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+bin[1] <= bin.DB_MAX_OUTPUT_PORT_TYPE
+bin[2] <= bin.DB_MAX_OUTPUT_PORT_TYPE
 bin[3] <= gray[3].DB_MAX_OUTPUT_PORT_TYPE
 
 

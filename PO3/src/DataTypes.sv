@@ -19,7 +19,7 @@ package DataTypes;
 		//POINTER PARameters
 
 	typedef logic [ADDR_WIDTH-1:0] RAM_size;
-
+	parameter maxramsize = 15;
 	///UART TIMER AND TIMING
 	parameter bit_timing = (50000000/115200);
 	parameter uartCounterMaxSizeBitSize = CeilLog2(bit_timing);

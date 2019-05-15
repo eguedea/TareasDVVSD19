@@ -17,24 +17,15 @@ import DataTypes::*;
 
 	always_ff@(posedge clk_w)
 	begin
-		if(!reset)
-			ram_out <= '0;
-		else
-		begin
+
 			if (en_w)
 				ram[write_addr] <= data;
-		end
 	end
 	
 	always_ff@(posedge clk_r)
 	begin
-		if(!reset)
-			ram_out <= '0;
-		else
-		begin
 			if(en_r)
 				ram_out <= ram[read_addr];
-		end
 	end
 
 endmodule

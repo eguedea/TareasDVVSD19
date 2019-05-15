@@ -21,8 +21,16 @@ begin
 	begin
 		if(push)
 		begin
-			w_en = '1;
-			counter = counter + 1;
+			if(counter == maxramsize-1)
+			begin
+				w_en = '1;
+				counter = '0;
+			end
+			else
+			begin
+				w_en = '1;
+				counter = counter + 1;
+			end
 		end
 		else
 			w_en = '0;
