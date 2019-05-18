@@ -20,15 +20,16 @@ begin
 	end
 	else
 	begin
-	   if(reset_bit_counter)
-			bit_counter <= '0;
+		if(increment_bit_counter)
+			counter <= counter + 1;
+	   
 		else if(counter == bitspertx-1)
 		begin	
 			bit_counter <= '1;
 			counter <= '0;
 		end
-		else if(increment_bit_counter)
-			counter <= counter + 1;
+		else if(reset_bit_counter)
+			bit_counter <= '0;
 	end
 end
 

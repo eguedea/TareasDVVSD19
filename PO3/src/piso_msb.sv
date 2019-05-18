@@ -1,5 +1,5 @@
 module piso_msb #(
-parameter DW = 11
+parameter DW = 11			
 ) (
 input logic              clk,    // Clock
 input logic              reset,    // asynchronous reset low active 
@@ -15,7 +15,7 @@ logic [DW-1:0]      rgstr_r;
 
 always_ff@(posedge clk or negedge reset) begin: rgstr_label
     if(!reset)
-        rgstr_r  <= '0;
+        rgstr_r  <= '1;
 	 
     else begin
 			if (enb) begin

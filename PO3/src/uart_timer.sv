@@ -20,7 +20,7 @@ always_ff@(posedge clk or negedge reset) begin
 	begin
 		if(!reset_timer) 
 		begin
-			if(counter == bit_timing-1)
+			if(counter == bit_timing)
 				next_bit <= 1;
 			else
 				counter <= counter + 1;

@@ -86,6 +86,8 @@ always_comb begin
 		  shift_reg = '0;
 		  load_reg = '1;
 		  busy = '1;
+		  idle_line = '1;
+
 		end
 		COUNT: begin
 		  reset_timer = '0;
@@ -94,7 +96,7 @@ always_comb begin
 		  shift_reg = '0;
 		  load_reg = '0;
 		  busy = '1;
-			
+			idle_line = '0;
 			
 		
 		end
@@ -105,7 +107,7 @@ always_comb begin
 		  shift_reg = '1;
 		  load_reg = '0;
 		  busy = '1;
-			
+			idle_line = '0;
 		end
 		WAIT: begin
 		  reset_timer = '0;
