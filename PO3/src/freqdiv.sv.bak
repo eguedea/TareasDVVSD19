@@ -1,0 +1,18 @@
+module freqdiv
+(
+input clk,
+input reset,
+output div
+);
+
+uartCounterDataType counter;
+
+always_ff@(posedge clk or negedge reset)
+begin
+	
+
+
+end
+
+
+enmodule

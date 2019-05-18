@@ -1,4 +1,4 @@
-interface circularfifo_if ();
+/*interface circularfifo_if ();
 import DataTypes::*;
 
 bit_t uart_clk;
@@ -54,3 +54,4 @@ output bit_t comp_full
 )
 
 endinterface
+*/

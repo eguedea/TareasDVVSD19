@@ -1,5 +1,5 @@
 module piso_msb #(
-parameter DW = 10
+parameter DW = 11
 ) (
 input logic              clk,    // Clock
 input logic              reset,    // asynchronous reset low active 

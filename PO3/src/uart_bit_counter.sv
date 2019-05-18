@@ -20,9 +20,6 @@ begin
 	end
 	else
 	begin
-		
-		
-			
 	   if(reset_bit_counter)
 			bit_counter <= '0;
 		else if(counter == bitspertx-1)

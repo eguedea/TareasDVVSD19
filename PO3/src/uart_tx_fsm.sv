@@ -38,16 +38,16 @@ begin
 				txstates <= COUNT;
 			end
 			COUNT: begin
-			  if(bit_counter)
-					txstates <= WAIT;
-				else if(next_bit)
+			  //if(bit_counter)
+				//	txstates <= IDLE;
+				if(next_bit)
 					txstates <= SHIFT;
 				
 			
 			end
 			SHIFT: begin
 				if(bit_counter)
-					txstates <= WAIT;
+					txstates <= IDLE;
 				else
 					txstates <= COUNT;
 			end
@@ -90,7 +90,7 @@ always_comb begin
 		COUNT: begin
 		  reset_timer = '0;
 		  increment_bit_counter = '0;
-		  reset_bit_counter = '1;
+		  reset_bit_counter = '0;
 		  shift_reg = '0;
 		  load_reg = '0;
 		  busy = '1;

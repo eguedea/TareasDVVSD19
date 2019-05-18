@@ -4,7 +4,7 @@ package DataTypes;
 
 	typedef logic [7:0] uint8_t;
 	typedef logic bit_t;
-	typedef enum {IDLE, SETUP, COUNT, SHIFT, WAIT} TX_STATE;
+	typedef enum {IDLE, SETUP,PRESHIFT, COUNT, SHIFT, WAIT} TX_STATE;
 	
 	//FIFO PARAMETERS
 	parameter DW_fifo = 8;
@@ -24,8 +24,9 @@ package DataTypes;
 	parameter bit_timing = (50000000/115200);
 	parameter uartCounterMaxSizeBitSize = CeilLog2(bit_timing);
 	typedef logic [uartCounterMaxSizeBitSize-1:0] uartCounterDataType;
-	parameter bits_amount = CeilLog2(10);
-	parameter bitspertx = 11;
+	parameter bits_amount = CeilLog2(11);
+	parameter bitspertx = 11
+	;
 	typedef logic [bits_amount-1:0] uartBitsAmountCounter;
 	
 	parameter usingEvenParity = 1'b0;

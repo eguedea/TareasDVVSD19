@@ -8,7 +8,8 @@ input bit_t reset,
 input bit_t transmit,
 input uint8_t data,
 output bit_t serial_output_rx,
-output bit_t busy
+output bit_t busy,
+output bit_t div
 );
 
 
@@ -79,12 +80,16 @@ piso_msb uartpiso
 .enb	(shift_reg_wire|load_reg_wire),
 .load	(load_reg_wire),
 .shift (shift_reg_wire),
-.inp ({1'b0,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],parity}),
+.inp ({1'b0,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],parity,1'b1}),
 .fsmReset	(idle_line_wire),
 .out (serial_output_rx)
 );
 
-//
+freqdiv fr
+(
+.*
+);
+//data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7]
 
 
 endmodule
