@@ -1,0 +1,35 @@
+module Processor 
+import ControlRx_in::*; 
+(
+	input clk,
+	input reset, 
+	input enable,
+	input Matriz_t Matriz,
+	input Vector_t Vector,
+	input DataIn_t Acomulador,
+
+	output DataIn_t Out_P
+);
+
+DataIn_t Counter;
+DataIn_t Resultado;
+always_ff @(posedge clk  or negedge reset) begin:Processor
+	if(!reset)begin
+		Counter <= 0;
+	end
+	else
+	begin 
+		if(enable)
+		begin 
+		
+			Resultado <= (Matriz(counter) * Vector(counter)) + Acomulador;
+		
+		
+		
+		
+		end 
+	end 
+end:Processor 
+
+endmodule 
+

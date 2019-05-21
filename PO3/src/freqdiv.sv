@@ -1,9 +1,9 @@
 module freqdiv
-import DataTypes::*;
+import ControlRx_in::*; 
 (
-input bit_t clk,
-input bit_t reset,
-output bit_t div
+	input One_t clk,
+	input One_t reset,
+	output One_t div
 );
 
 uartCounterDataType counter;
@@ -25,7 +25,4 @@ begin
 	 end
  end
 end
-
-//assign div = (bit_timing/2)?1'b0:1'b1;
-
-endmodule
+endmodule 

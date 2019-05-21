@@ -1,0 +1,12 @@
+module StateMachine_Rx_in
+import UART_pkg::*; 
+(
+	input clk,
+	input reset,
+	input enb,
+	
+	input int8_t DataRecive_Rx
+
+);
+
+endmodule 

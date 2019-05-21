@@ -1,0 +1,7 @@
+module RAM_RxIn
+import ControlRx_in::*; 
+(
+
+);
+
+endmodule 

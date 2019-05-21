@@ -1,0 +1,52 @@
+ ///*synthesis keep*/
+module UART 
+(
+	input  clk,
+	input  reset,
+	//Transmisor
+	input  transmit,
+	input  [7:0] data_to_transmit,
+	output serial_tx/*synthesis keep*/,
+	//Receptor
+	input   logic serial_rx,
+	output [7:0] received_data,
+	//output logic rx_Interrupt,
+	output parity_error,
+//	output tx_busy
+	output clk_PLL
+);
+
+logic Baud_clk_Wire/*synthesis keep*/;
+logic rx_Interrupt_Shot/*synthesis keep*/;
+wire Shot_to_Tx/*synthesis keep*/;
+wire TX_load_wire;
+wire TX_shift_wire;
+
+//assign BaudRate=Baud_clk_Wire;
+//assign clk_output=clk;
+	
+wire clkInter/*synthesis keep*/; 
+
+ClockGenerator	ClockGenerator_inst (
+	.areset ( !reset ),
+	.inclk0 ( clk ),
+	.c0 ( clkInter )
+);
+
+assign clk_PLL = clkInter;
+
+	
+UART_RX
+Receiver
+(
+	.serial_rx(serial_rx),
+	.clk(clkInter),
+	.reset(reset),
+	
+	.received_data(received_data)
+);
+
+
+
+endmodule
+	

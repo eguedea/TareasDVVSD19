@@ -1,0 +1,72 @@
+`timescale 1ns/1ps
+
+module UART_TB;
+
+
+
+	logic clk=0;
+	logic reset;
+	logic transmit;
+	logic data_to_transmit;
+	logic serial_tx=1;
+	
+	logic serial_rx;
+	logic [7:0]received_data;
+	logic parity_error;
+	
+
+
+UART
+DUV
+(
+	.clk(clk),
+	.reset(reset),
+	.transmit(transmit),
+	.data_to_transmit(data_to_transmit),
+	.serial_tx(serial_tx),
+	
+	.serial_rx(serial_rx),
+	.received_data(received_data),
+	.parity_error(parity_error)
+);
+
+/*********************************************************/
+initial // Clock generator
+  begin
+    forever #1 clk = !clk;
+  end
+/*********************************************************/
+initial begin // reset generator
+	#0 reset = 0;
+	serial_rx = 1;
+
+	#2 reset = 1;
+end
+
+/*********************************************************/
+initial begin // enable
+	#868 serial_rx = 1;
+	#868 serial_rx = 0;
+	
+	#868 serial_rx = 1;
+	#868 serial_rx = 0;
+	#868 serial_rx = 0;
+	#868 serial_rx = 1;
+	#868 serial_rx = 1;
+	#868 serial_rx = 0;
+	#868 serial_rx = 0;
+	#868 serial_rx = 1;
+	
+	#868 serial_rx = 1;
+	#868 serial_rx = 1;
+	
+	
+
+end
+
+
+
+/*********************************************************/
+
+
+endmodule

@@ -8,254 +8,306 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/eric_/Documents/Escuela/DVVVSD/Tareas/PO3/tb
-XDataTypes
+vbinToGray
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1557665437
+Z2 DXx4 work 9 DataTypes 0 22 9X[><i:GcTVQF;AP=_WJ52
+Z3 !s110 1558197183
 !i10b 1
-!s100 >3Hb5WE4RE99LRR914Kj;2
-IF6OI_8YD0i<Z5?>PQGi>L3
-VF6OI_8YD0i<Z5?>PQGi>L3
+!s100 =4KD;hbRmWCB9FT@ICoJ22
+I1BX@6lZQW`M5hbFO^Y5f?2
+Z4 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 binToGray_sv_unit
 S1
 R0
-w1557657397
+w1557863537
+8../src/binToGray.sv
+F../src/binToGray.sv
+L0 1
+Z5 OV;L;10.3c;59
+r1
+!s85 0
+31
+Z6 !s108 1558197183.830000
+Z7 !s107 circularfifo_tb.sv|../src/pointers.sv|../src/grayToBin.sv|../src/flipflop.sv|../src/dualFF.sv|../src/Comparator.sv|../src/binToGray.sv|../src/simple_dual_port_ram_dual_clock.sv|../src/uartToProcessorComp.sv|../src/readpointers.sv|../src/processorToUartComp.sv|../src/circularfifo.sv|../src/DataTypes.sv|
+Z8 !s90 -reportprogress|300|-f|fifofiles.f|
+!i113 1
+nbin@to@gray
+vcircularfifo
+R1
+R2
+R3
+!i10b 1
+!s100 Bj7QkH5Xk<:WU>jD`nVhS1
+IHJZZoOh:IS0kD7nkT>2N`0
+R4
+!s105 circularfifo_sv_unit
+S1
+R0
+w1558156981
+8../src/circularfifo.sv
+F../src/circularfifo.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+vcircularfifo_tb
+R1
+R2
+R3
+!i10b 1
+!s100 cc<`mNVE^7=aMRA?DBCLj2
+IN[55mBTgQ7Nd4FjlcA@NX1
+R4
+!s105 circularfifo_tb_sv_unit
+S1
+R0
+w1557873233
+8circularfifo_tb.sv
+Fcircularfifo_tb.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+vComparator
+R1
+R3
+!i10b 1
+!s100 KT94EMegc6WUO0zDIj8:g0
+IFG@4h43l^l]Da5Obm<@fg0
+R4
+!s105 Comparator_sv_unit
+S1
+R0
+w1558192348
+8../src/Comparator.sv
+F../src/Comparator.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+n@comparator
+XDataTypes
+R1
+R3
+!i10b 1
+!s100 bDoRD3Fj7^KfDR`SF[=`b2
+I9X[><i:GcTVQF;AP=_WJ52
+V9X[><i:GcTVQF;AP=_WJ52
+S1
+R0
+w1558178359
 8../src/DataTypes.sv
 F../src/DataTypes.sv
 L0 3
-Z3 OV;L;10.3c;59
+R5
 r1
 !s85 0
 31
-Z4 !s108 1557665437.678000
-Z5 !s107 uart_transmitter_tb.sv|../src/uart_tx_fsm.sv|../src/uart_transmitter.sv|../src/uart_timer.sv|../src/uart_reciever.sv|../src/uart_parity_mod.sv|../src/uart_bit_counter.sv|../src/TopUart.sv|../src/piso_msb.sv|../src/One_Shot.sv|../src/DataTypes.sv|
-Z6 !s90 -reportprogress|300|-f|files.f|
+R6
+R7
+R8
 !i113 1
 n@data@types
-vOne_Shot
+vdualFF
 R1
 R2
-!i10b 1
-!s100 hUXZn8X7H[jPWcN26:BR33
-IVSZ03ciOhDJTSAiPbgUZP3
-Z7 V`JN@9S9cnhjKRR_L]QIcM3
-!s105 One_Shot_sv_unit
-S1
-R0
-w1556922848
-8../src/One_Shot.sv
-F../src/One_Shot.sv
-L0 8
 R3
-r1
-!s85 0
-31
-R4
-R5
-R6
-!i113 1
-n@one_@shot
-vpiso_msb
-R1
-R2
 !i10b 1
-!s100 JjKnE=R6ejiBafnX_Hi]o0
-I<YbQfcJCoVBLgfgaWfQ6]1
-R7
-!s105 piso_msb_sv_unit
+!s100 gKfT0E6hmVfYREZIl<Zz`3
+In@e=hUBR1OP?76jWY26I00
+R4
+!s105 dualFF_sv_unit
 S1
 R0
-w1557664007
-8../src/piso_msb.sv
-F../src/piso_msb.sv
+w1557863668
+8../src/dualFF.sv
+F../src/dualFF.sv
 L0 1
-R3
+R5
 r1
 !s85 0
 31
-R4
-R5
 R6
-!i113 1
-vTopUart
-R1
-R2
-!i10b 1
-!s100 a3h6IYK4Nc>Q@HH;g1fPU2
-ITP5FTnL2Nf=N8f]T2nlIc0
 R7
-!s105 TopUart_sv_unit
-S1
-R0
-w1557078687
-8../src/TopUart.sv
-F../src/TopUart.sv
-L0 1
-R3
-r1
-!s85 0
-31
-R4
-R5
-R6
-!i113 1
-n@top@uart
-vuart_bit_counter
-R1
-Z8 DXx4 work 9 DataTypes 0 22 F6OI_8YD0i<Z5?>PQGi>L3
-R2
-!i10b 1
-!s100 NgbnVa532F_eIR[DV>m9J3
-InH;L916LiONAaC@QPCQl01
-R7
-!s105 uart_bit_counter_sv_unit
-S1
-R0
-w1557664030
-8../src/uart_bit_counter.sv
-F../src/uart_bit_counter.sv
-L0 1
-R3
-r1
-!s85 0
-31
-R4
-R5
-R6
-!i113 1
-vuart_parity_mod
-R1
 R8
-R2
-!i10b 1
-!s100 ]cV5o<e0KN<>_lX34H5O;2
-I`:j7S>VlLgGemkKMno_<A2
-R7
-!s105 uart_parity_mod_sv_unit
-S1
-R0
-w1557449530
-8../src/uart_parity_mod.sv
-F../src/uart_parity_mod.sv
-L0 1
-R3
-r1
-!s85 0
-31
-R4
-R5
-R6
 !i113 1
-vuart_reciever
+ndual@f@f
+vflipflop
 R1
-R8
 R2
+R3
 !i10b 1
-!s100 eaLYZ6nO3?<cR2WLF5KBb3
-I[ZM]Clom[MDaMkLJd=OZn0
-R7
-!s105 uart_reciever_sv_unit
+!s100 WNcfSP6i`e59SKMXNhY;50
+ImfDRTMeNH^]z=_:Dl7he=1
+R4
+!s105 flipflop_sv_unit
 S1
 R0
-w1557429301
-8../src/uart_reciever.sv
-F../src/uart_reciever.sv
+w1557870961
+8../src/flipflop.sv
+F../src/flipflop.sv
 L0 1
-R3
+R5
 r1
 !s85 0
 31
-R4
-R5
 R6
-!i113 1
-vuart_timer
-R1
-R8
-R2
-!i10b 1
-!s100 K^N4[]YRcF@R=V_AH_4I43
-IBQf27Ijn3H5MRGFXTD_X71
 R7
-!s105 uart_timer_sv_unit
+R8
+!i113 1
+vgrayToBin
+R1
+R2
+R3
+!i10b 1
+!s100 g:GOjdG<``EHJ959TW<_l1
+IoC6zK0TX82Wf@XgE;91fB1
+R4
+!s105 grayToBin_sv_unit
 S1
 R0
-w1557622288
-8../src/uart_timer.sv
-F../src/uart_timer.sv
+w1557870688
+8../src/grayToBin.sv
+F../src/grayToBin.sv
 L0 1
-R3
+R5
 r1
 !s85 0
 31
-R4
-R5
 R6
-!i113 1
-vuart_transmitter
-R1
-R8
-R2
-!i10b 1
-!s100 ]OlkfLb;jP4>^ZZilR;E03
-IUzdfJnhfW7^An0>>I1mWz3
 R7
-!s105 uart_transmitter_sv_unit
-S1
-R0
-w1557664069
-8../src/uart_transmitter.sv
-F../src/uart_transmitter.sv
-L0 2
+R8
+!i113 1
+ngray@to@bin
+vpointers
+R1
+R2
 R3
-r1
-!s85 0
-31
-R4
-R5
-R6
-!i113 1
-vuart_transmitter_tb
-R1
-R8
-R2
 !i10b 1
-!s100 cS<hni[AVSgGO@edH=7=F3
-IJ<:CV6gULMo71c`mM3jD^1
-R7
-!s105 uart_transmitter_tb_sv_unit
+!s100 @e`31OOF1:[Mh0[]Q9nhj0
+Im>`JIXm_ZhHiJ>Ah[RWWn3
+R4
+!s105 pointers_sv_unit
 S1
 R0
-w1557646311
-8uart_transmitter_tb.sv
-Fuart_transmitter_tb.sv
+w1557940934
+8../src/pointers.sv
+F../src/pointers.sv
 L0 1
-R3
+R5
 r1
 !s85 0
 31
-R4
-R5
 R6
-!i113 1
-vuart_tx_fsm
-R1
-R8
-R2
-!i10b 1
-!s100 Alk?z4bUok^=[@>MV?DTB2
-IWQhFmU?Te`AZFSlBK2maL3
 R7
-!s105 uart_tx_fsm_sv_unit
+R8
+!i113 1
+vprocessorToUartComp
+R1
+R2
+R3
+!i10b 1
+!s100 SO_dfM8Ch@4Xo8PCUCHmg2
+I3ePoJ0NXc7F?G6D?_Y<8G0
+R4
+!s105 processorToUartComp_sv_unit
 S1
 R0
-w1557663984
-8../src/uart_tx_fsm.sv
-F../src/uart_tx_fsm.sv
+w1557949074
+8../src/processorToUartComp.sv
+F../src/processorToUartComp.sv
 L0 1
-R3
+R5
 r1
 !s85 0
 31
-R4
-R5
 R6
+R7
+R8
 !i113 1
+nprocessor@to@uart@comp
+vreadpointers
+R1
+R2
+R3
+!i10b 1
+!s100 obN[^Lz6@1MN84GQ:4eD03
+ILjEN85fOfAToN_FhVlHB:3
+R4
+!s105 readpointers_sv_unit
+S1
+R0
+w1557940817
+8../src/readpointers.sv
+F../src/readpointers.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+vsimple_dual_port_ram_dual_clock
+R1
+R2
+R3
+!i10b 1
+!s100 0df>X?cWS?1=Eib]nc?l;0
+IHO]hiG`4T<kHgbBWR8:0N1
+R4
+!s105 simple_dual_port_ram_dual_clock_sv_unit
+S1
+R0
+w1557941086
+8../src/simple_dual_port_ram_dual_clock.sv
+F../src/simple_dual_port_ram_dual_clock.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+vuartToProcessorComp
+R1
+R2
+R3
+!i10b 1
+!s100 J<VeJXfRJ_BgSbL3RFFzL1
+INQnK9jfzdo>oCLod4_kUH0
+R4
+!s105 uartToProcessorComp_sv_unit
+S1
+R0
+w1557949009
+8../src/uartToProcessorComp.sv
+F../src/uartToProcessorComp.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+nuart@to@processor@comp

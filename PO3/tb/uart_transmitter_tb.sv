@@ -7,6 +7,7 @@ bit_t transmit;
 uint8_t data;
 bit_t serial_output_rx;
 bit_t busy;
+bit_t div;
 
 uart_transmitter UUT
 (
@@ -23,11 +24,11 @@ initial
 	begin
 		#2 reset = '0;
 		#3 reset = '1;
-		data = 8'd324;
+		data = 8'b1011010;
 		#2 transmit = '1;
 		#4 transmit = '0;
-		#100000
-				data = 8'd0;
+		#10000
+		data = 8'd0;
 
 		#2 transmit = 1;
 		#2 transmit = 0;

@@ -1,0 +1,47 @@
+module Mux_Processor
+(	
+	input DataIn_t size,
+	input Matriz_t Matriz,
+	input vector_t Vector
+
+);
+vector_t P0,P1,P2,P3,P4,P5,P6,P7;
+assign P0 = Matriz[0:(size-1)];
+assign P1 = Matriz[size:(size*2)-1];
+assign P2 = Matriz[size*2:(size*3)-1];
+assign P3 = Matriz[size*3:(size*4)-1];
+assign P4 = Matriz[size*4:(size*5)-1];
+assign P5 = Matriz[size*5:(size*6)-1];
+assign P6 = Matriz[size*6:(size*7)-1];
+assign P7 = Matriz[size*7:(size*8)-1];
+
+always_comb begin 
+	if(Cntrl_P1 == 1)
+		P0_Out = P0;
+	else
+		P0_Out = P4;
+end 
+
+always_comb begin 
+	if(Cntrl_P2 == 1)
+		P1_Out = P1;
+	else
+		P1_Out = P5;
+end 
+
+always_comb begin 
+	if(Cntrl_P3 == 1)
+		P2_Out = P2;
+	else
+		P2_Out = P6;
+end 
+
+always_comb begin 
+	if(Cntrl_P4 == 1)
+		P3_Out = P3;
+	else
+		P3_Out = P7;
+end 
+
+
+endmodule 

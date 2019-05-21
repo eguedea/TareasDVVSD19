@@ -1,0 +1,144 @@
+
+module UART_RX
+(
+input  logic serial_rx,
+input   clk,
+input   reset,
+output [7:0] received_data
+);
+
+logic [7:0]  rx_register;
+logic [8:0]	 count;
+logic parity,enable_count,enable_count_wait,countFinished,countFinished_Wait,Enable_b,countF_b;
+
+enum logic [2:0] {IDLE,SETUP,RECIVE,PARITY,READY} state;
+
+CounterParameter_RX
+#(.Maximum_Value(217))
+Contador_Wait
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(enable_count_wait),
+	
+	.Flag(countFinished_Wait)
+);
+
+CounterParameter
+#(.Maximum_Value(434*8))
+Contador_BIT
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(enable_count),
+	
+	.Flag(countFinished)
+);
+
+CounterParameter
+#(.Maximum_Value(434))
+Contador_B
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(Enable_b),
+	
+	.Flag(countF_b)
+);
+
+sipo 
+#(.DW(8))
+Register_RX
+(
+	.clk(clk),
+	.rst(reset),
+	.enb(countFinished_Wait|countF_b),
+	.inp(serial_rx),
+	.out(received_data)
+
+
+);
+always_ff @(posedge clk, negedge reset)
+	begin
+		if(reset==0)
+			begin
+				state <= IDLE;
+			end
+		else
+			begin
+			case(state)
+			IDLE:
+				if(serial_rx == 1)
+					state <= IDLE;	
+				else
+					state <= SETUP;
+			SETUP:			////wait
+				if(countFinished_Wait==1)
+				begin
+					state <= RECIVE;	//Toma el primer dato
+					Enable_b <= 1;
+				end
+				else 
+					state <= SETUP;
+					
+			RECIVE: 
+				if(countFinished == 1'b1) // Toma 7 Datos
+					state <= PARITY;	
+				else
+					state <= RECIVE;
+					
+			PARITY:
+				begin
+					state <= READY; //Toma el bit de paridad 
+					Enable_b <= 0;
+				end
+			READY:
+					state <= IDLE;	// Tiene el dato listo
+				
+			default:
+					state <= IDLE;	
+			endcase
+			end
+	end
+always_comb begin
+
+	enable_count = 1'b0;
+	enable_count_wait = 0;
+	case(state)
+		IDLE:
+			begin
+				enable_count = 0;
+				enable_count_wait = 0;
+			end
+		SETUP:
+			begin
+				enable_count = 0;
+				enable_count_wait = 1;
+			end
+		RECIVE:
+			begin
+				enable_count = 1;
+				enable_count_wait = 0;
+			end
+		PARITY:
+			begin
+				enable_count = 0;
+				enable_count_wait = 0;
+			end
+		READY:
+			begin
+				enable_count = 0;
+				enable_count_wait = 0;
+			end
+		default:
+			begin
+				enable_count = 0;
+				enable_count_wait = 0;
+			end
+		
+	endcase
+end
+
+endmodule
+
+

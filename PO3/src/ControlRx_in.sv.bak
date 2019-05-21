@@ -1,0 +1,14 @@
+package ControlRx_in;
+
+
+typedef enum RxInState_t {
+		IDLE,
+		WAIT,
+		RECIVE,
+		PARITY,
+		READY
+	
+} StateRxIn_t;
+
+
+endpackage: ControlRx_in

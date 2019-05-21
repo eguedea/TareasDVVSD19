@@ -1,15 +1,16 @@
-
 module Comparator
-import DataTypes::*;
+#(
+	parameter word_length = 8
+)
 (
 //inputs
-	input [ADDR_WIDTH-1:0] value,
-	input [ADDR_WIDTH-1:0] compare_value,
+	input [word_length-1:0] value,
+	input [word_length-1:0] compare_value,
 //Outputs
-	output bit_t compare_flag
+	output compare_flag
 );
 //Variables a utilizar
-bit_t flag=0;
+bit flag=0;
 
 always_comb begin
 	if (compare_value == value)
