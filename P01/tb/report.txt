@@ -1,0 +1,255 @@
+Time:                  45, A: -128, B: -128, Expected: 16384 Got:-16384 
+Time:                6165, A: -127, B: -128, Expected: 16256 Got:-16256 
+Time:               12285, A: -126, B: -128, Expected: 16128 Got:-16128 
+Time:               18405, A: -125, B: -128, Expected: 16000 Got:-16000 
+Time:               24525, A: -124, B: -128, Expected: 15872 Got:-15872 
+Time:               30645, A: -123, B: -128, Expected: 15744 Got:-15744 
+Time:               36765, A: -122, B: -128, Expected: 15616 Got:-15616 
+Time:               42885, A: -121, B: -128, Expected: 15488 Got:-15488 
+Time:               49005, A: -120, B: -128, Expected: 15360 Got:-15360 
+Time:               55125, A: -119, B: -128, Expected: 15232 Got:-15232 
+Time:               61245, A: -118, B: -128, Expected: 15104 Got:-15104 
+Time:               67365, A: -117, B: -128, Expected: 14976 Got:-14976 
+Time:               73485, A: -116, B: -128, Expected: 14848 Got:-14848 
+Time:               79605, A: -115, B: -128, Expected: 14720 Got:-14720 
+Time:               85725, A: -114, B: -128, Expected: 14592 Got:-14592 
+Time:               91845, A: -113, B: -128, Expected: 14464 Got:-14464 
+Time:               97965, A: -112, B: -128, Expected: 14336 Got:-14336 
+Time:              104085, A: -111, B: -128, Expected: 14208 Got:-14208 
+Time:              110205, A: -110, B: -128, Expected: 14080 Got:-14080 
+Time:              116325, A: -109, B: -128, Expected: 13952 Got:-13952 
+Time:              122445, A: -108, B: -128, Expected: 13824 Got:-13824 
+Time:              128565, A: -107, B: -128, Expected: 13696 Got:-13696 
+Time:              134685, A: -106, B: -128, Expected: 13568 Got:-13568 
+Time:              140805, A: -105, B: -128, Expected: 13440 Got:-13440 
+Time:              146925, A: -104, B: -128, Expected: 13312 Got:-13312 
+Time:              153045, A: -103, B: -128, Expected: 13184 Got:-13184 
+Time:              159165, A: -102, B: -128, Expected: 13056 Got:-13056 
+Time:              165285, A: -101, B: -128, Expected: 12928 Got:-12928 
+Time:              171405, A: -100, B: -128, Expected: 12800 Got:-12800 
+Time:              177525, A:  -99, B: -128, Expected: 12672 Got:-12672 
+Time:              183645, A:  -98, B: -128, Expected: 12544 Got:-12544 
+Time:              189765, A:  -97, B: -128, Expected: 12416 Got:-12416 
+Time:              195885, A:  -96, B: -128, Expected: 12288 Got:-12288 
+Time:              202005, A:  -95, B: -128, Expected: 12160 Got:-12160 
+Time:              208125, A:  -94, B: -128, Expected: 12032 Got:-12032 
+Time:              214245, A:  -93, B: -128, Expected: 11904 Got:-11904 
+Time:              220365, A:  -92, B: -128, Expected: 11776 Got:-11776 
+Time:              226485, A:  -91, B: -128, Expected: 11648 Got:-11648 
+Time:              232605, A:  -90, B: -128, Expected: 11520 Got:-11520 
+Time:              238725, A:  -89, B: -128, Expected: 11392 Got:-11392 
+Time:              244845, A:  -88, B: -128, Expected: 11264 Got:-11264 
+Time:              250965, A:  -87, B: -128, Expected: 11136 Got:-11136 
+Time:              257085, A:  -86, B: -128, Expected: 11008 Got:-11008 
+Time:              263205, A:  -85, B: -128, Expected: 10880 Got:-10880 
+Time:              269325, A:  -84, B: -128, Expected: 10752 Got:-10752 
+Time:              275445, A:  -83, B: -128, Expected: 10624 Got:-10624 
+Time:              281565, A:  -82, B: -128, Expected: 10496 Got:-10496 
+Time:              287685, A:  -81, B: -128, Expected: 10368 Got:-10368 
+Time:              293805, A:  -80, B: -128, Expected: 10240 Got:-10240 
+Time:              299925, A:  -79, B: -128, Expected: 10112 Got:-10112 
+Time:              306045, A:  -78, B: -128, Expected:  9984 Got: -9984 
+Time:              312165, A:  -77, B: -128, Expected:  9856 Got: -9856 
+Time:              318285, A:  -76, B: -128, Expected:  9728 Got: -9728 
+Time:              324405, A:  -75, B: -128, Expected:  9600 Got: -9600 
+Time:              330525, A:  -74, B: -128, Expected:  9472 Got: -9472 
+Time:              336645, A:  -73, B: -128, Expected:  9344 Got: -9344 
+Time:              342765, A:  -72, B: -128, Expected:  9216 Got: -9216 
+Time:              348885, A:  -71, B: -128, Expected:  9088 Got: -9088 
+Time:              355005, A:  -70, B: -128, Expected:  8960 Got: -8960 
+Time:              361125, A:  -69, B: -128, Expected:  8832 Got: -8832 
+Time:              367245, A:  -68, B: -128, Expected:  8704 Got: -8704 
+Time:              373365, A:  -67, B: -128, Expected:  8576 Got: -8576 
+Time:              379485, A:  -66, B: -128, Expected:  8448 Got: -8448 
+Time:              385605, A:  -65, B: -128, Expected:  8320 Got: -8320 
+Time:              391725, A:  -64, B: -128, Expected:  8192 Got: -8192 
+Time:              397845, A:  -63, B: -128, Expected:  8064 Got: -8064 
+Time:              403965, A:  -62, B: -128, Expected:  7936 Got: -7936 
+Time:              410085, A:  -61, B: -128, Expected:  7808 Got: -7808 
+Time:              416205, A:  -60, B: -128, Expected:  7680 Got: -7680 
+Time:              422325, A:  -59, B: -128, Expected:  7552 Got: -7552 
+Time:              428445, A:  -58, B: -128, Expected:  7424 Got: -7424 
+Time:              434565, A:  -57, B: -128, Expected:  7296 Got: -7296 
+Time:              440685, A:  -56, B: -128, Expected:  7168 Got: -7168 
+Time:              446805, A:  -55, B: -128, Expected:  7040 Got: -7040 
+Time:              452925, A:  -54, B: -128, Expected:  6912 Got: -6912 
+Time:              459045, A:  -53, B: -128, Expected:  6784 Got: -6784 
+Time:              465165, A:  -52, B: -128, Expected:  6656 Got: -6656 
+Time:              471285, A:  -51, B: -128, Expected:  6528 Got: -6528 
+Time:              477405, A:  -50, B: -128, Expected:  6400 Got: -6400 
+Time:              483525, A:  -49, B: -128, Expected:  6272 Got: -6272 
+Time:              489645, A:  -48, B: -128, Expected:  6144 Got: -6144 
+Time:              495765, A:  -47, B: -128, Expected:  6016 Got: -6016 
+Time:              501885, A:  -46, B: -128, Expected:  5888 Got: -5888 
+Time:              508005, A:  -45, B: -128, Expected:  5760 Got: -5760 
+Time:              514125, A:  -44, B: -128, Expected:  5632 Got: -5632 
+Time:              520245, A:  -43, B: -128, Expected:  5504 Got: -5504 
+Time:              526365, A:  -42, B: -128, Expected:  5376 Got: -5376 
+Time:              532485, A:  -41, B: -128, Expected:  5248 Got: -5248 
+Time:              538605, A:  -40, B: -128, Expected:  5120 Got: -5120 
+Time:              544725, A:  -39, B: -128, Expected:  4992 Got: -4992 
+Time:              550845, A:  -38, B: -128, Expected:  4864 Got: -4864 
+Time:              556965, A:  -37, B: -128, Expected:  4736 Got: -4736 
+Time:              563085, A:  -36, B: -128, Expected:  4608 Got: -4608 
+Time:              569205, A:  -35, B: -128, Expected:  4480 Got: -4480 
+Time:              575325, A:  -34, B: -128, Expected:  4352 Got: -4352 
+Time:              581445, A:  -33, B: -128, Expected:  4224 Got: -4224 
+Time:              587565, A:  -32, B: -128, Expected:  4096 Got: -4096 
+Time:              593685, A:  -31, B: -128, Expected:  3968 Got: -3968 
+Time:              599805, A:  -30, B: -128, Expected:  3840 Got: -3840 
+Time:              605925, A:  -29, B: -128, Expected:  3712 Got: -3712 
+Time:              612045, A:  -28, B: -128, Expected:  3584 Got: -3584 
+Time:              618165, A:  -27, B: -128, Expected:  3456 Got: -3456 
+Time:              624285, A:  -26, B: -128, Expected:  3328 Got: -3328 
+Time:              630405, A:  -25, B: -128, Expected:  3200 Got: -3200 
+Time:              636525, A:  -24, B: -128, Expected:  3072 Got: -3072 
+Time:              642645, A:  -23, B: -128, Expected:  2944 Got: -2944 
+Time:              648765, A:  -22, B: -128, Expected:  2816 Got: -2816 
+Time:              654885, A:  -21, B: -128, Expected:  2688 Got: -2688 
+Time:              661005, A:  -20, B: -128, Expected:  2560 Got: -2560 
+Time:              667125, A:  -19, B: -128, Expected:  2432 Got: -2432 
+Time:              673245, A:  -18, B: -128, Expected:  2304 Got: -2304 
+Time:              679365, A:  -17, B: -128, Expected:  2176 Got: -2176 
+Time:              685485, A:  -16, B: -128, Expected:  2048 Got: -2048 
+Time:              691605, A:  -15, B: -128, Expected:  1920 Got: -1920 
+Time:              697725, A:  -14, B: -128, Expected:  1792 Got: -1792 
+Time:              703845, A:  -13, B: -128, Expected:  1664 Got: -1664 
+Time:              709965, A:  -12, B: -128, Expected:  1536 Got: -1536 
+Time:              716085, A:  -11, B: -128, Expected:  1408 Got: -1408 
+Time:              722205, A:  -10, B: -128, Expected:  1280 Got: -1280 
+Time:              728325, A:   -9, B: -128, Expected:  1152 Got: -1152 
+Time:              734445, A:   -8, B: -128, Expected:  1024 Got: -1024 
+Time:              740565, A:   -7, B: -128, Expected:   896 Got:  -896 
+Time:              746685, A:   -6, B: -128, Expected:   768 Got:  -768 
+Time:              752805, A:   -5, B: -128, Expected:   640 Got:  -640 
+Time:              758925, A:   -4, B: -128, Expected:   512 Got:  -512 
+Time:              765045, A:   -3, B: -128, Expected:   384 Got:  -384 
+Time:              771165, A:   -2, B: -128, Expected:   256 Got:  -256 
+Time:              777285, A:   -1, B: -128, Expected:   128 Got:  -128 
+Time:              789525, A:    1, B: -128, Expected:  -128 Got:   128 
+Time:              795645, A:    2, B: -128, Expected:  -256 Got:   256 
+Time:              801765, A:    3, B: -128, Expected:  -384 Got:   384 
+Time:              807885, A:    4, B: -128, Expected:  -512 Got:   512 
+Time:              814005, A:    5, B: -128, Expected:  -640 Got:   640 
+Time:              820125, A:    6, B: -128, Expected:  -768 Got:   768 
+Time:              826245, A:    7, B: -128, Expected:  -896 Got:   896 
+Time:              832365, A:    8, B: -128, Expected: -1024 Got:  1024 
+Time:              838485, A:    9, B: -128, Expected: -1152 Got:  1152 
+Time:              844605, A:   10, B: -128, Expected: -1280 Got:  1280 
+Time:              850725, A:   11, B: -128, Expected: -1408 Got:  1408 
+Time:              856845, A:   12, B: -128, Expected: -1536 Got:  1536 
+Time:              862965, A:   13, B: -128, Expected: -1664 Got:  1664 
+Time:              869085, A:   14, B: -128, Expected: -1792 Got:  1792 
+Time:              875205, A:   15, B: -128, Expected: -1920 Got:  1920 
+Time:              881325, A:   16, B: -128, Expected: -2048 Got:  2048 
+Time:              887445, A:   17, B: -128, Expected: -2176 Got:  2176 
+Time:              893565, A:   18, B: -128, Expected: -2304 Got:  2304 
+Time:              899685, A:   19, B: -128, Expected: -2432 Got:  2432 
+Time:              905805, A:   20, B: -128, Expected: -2560 Got:  2560 
+Time:              911925, A:   21, B: -128, Expected: -2688 Got:  2688 
+Time:              918045, A:   22, B: -128, Expected: -2816 Got:  2816 
+Time:              924165, A:   23, B: -128, Expected: -2944 Got:  2944 
+Time:              930285, A:   24, B: -128, Expected: -3072 Got:  3072 
+Time:              936405, A:   25, B: -128, Expected: -3200 Got:  3200 
+Time:              942525, A:   26, B: -128, Expected: -3328 Got:  3328 
+Time:              948645, A:   27, B: -128, Expected: -3456 Got:  3456 
+Time:              954765, A:   28, B: -128, Expected: -3584 Got:  3584 
+Time:              960885, A:   29, B: -128, Expected: -3712 Got:  3712 
+Time:              967005, A:   30, B: -128, Expected: -3840 Got:  3840 
+Time:              973125, A:   31, B: -128, Expected: -3968 Got:  3968 
+Time:              979245, A:   32, B: -128, Expected: -4096 Got:  4096 
+Time:              985365, A:   33, B: -128, Expected: -4224 Got:  4224 
+Time:              991485, A:   34, B: -128, Expected: -4352 Got:  4352 
+Time:              997605, A:   35, B: -128, Expected: -4480 Got:  4480 
+Time:             1003725, A:   36, B: -128, Expected: -4608 Got:  4608 
+Time:             1009845, A:   37, B: -128, Expected: -4736 Got:  4736 
+Time:             1015965, A:   38, B: -128, Expected: -4864 Got:  4864 
+Time:             1022085, A:   39, B: -128, Expected: -4992 Got:  4992 
+Time:             1028205, A:   40, B: -128, Expected: -5120 Got:  5120 
+Time:             1034325, A:   41, B: -128, Expected: -5248 Got:  5248 
+Time:             1040445, A:   42, B: -128, Expected: -5376 Got:  5376 
+Time:             1046565, A:   43, B: -128, Expected: -5504 Got:  5504 
+Time:             1052685, A:   44, B: -128, Expected: -5632 Got:  5632 
+Time:             1058805, A:   45, B: -128, Expected: -5760 Got:  5760 
+Time:             1064925, A:   46, B: -128, Expected: -5888 Got:  5888 
+Time:             1071045, A:   47, B: -128, Expected: -6016 Got:  6016 
+Time:             1077165, A:   48, B: -128, Expected: -6144 Got:  6144 
+Time:             1083285, A:   49, B: -128, Expected: -6272 Got:  6272 
+Time:             1089405, A:   50, B: -128, Expected: -6400 Got:  6400 
+Time:             1095525, A:   51, B: -128, Expected: -6528 Got:  6528 
+Time:             1101645, A:   52, B: -128, Expected: -6656 Got:  6656 
+Time:             1107765, A:   53, B: -128, Expected: -6784 Got:  6784 
+Time:             1113885, A:   54, B: -128, Expected: -6912 Got:  6912 
+Time:             1120005, A:   55, B: -128, Expected: -7040 Got:  7040 
+Time:             1126125, A:   56, B: -128, Expected: -7168 Got:  7168 
+Time:             1132245, A:   57, B: -128, Expected: -7296 Got:  7296 
+Time:             1138365, A:   58, B: -128, Expected: -7424 Got:  7424 
+Time:             1144485, A:   59, B: -128, Expected: -7552 Got:  7552 
+Time:             1150605, A:   60, B: -128, Expected: -7680 Got:  7680 
+Time:             1156725, A:   61, B: -128, Expected: -7808 Got:  7808 
+Time:             1162845, A:   62, B: -128, Expected: -7936 Got:  7936 
+Time:             1168965, A:   63, B: -128, Expected: -8064 Got:  8064 
+Time:             1175085, A:   64, B: -128, Expected: -8192 Got:  8192 
+Time:             1181205, A:   65, B: -128, Expected: -8320 Got:  8320 
+Time:             1187325, A:   66, B: -128, Expected: -8448 Got:  8448 
+Time:             1193445, A:   67, B: -128, Expected: -8576 Got:  8576 
+Time:             1199565, A:   68, B: -128, Expected: -8704 Got:  8704 
+Time:             1205685, A:   69, B: -128, Expected: -8832 Got:  8832 
+Time:             1211805, A:   70, B: -128, Expected: -8960 Got:  8960 
+Time:             1217925, A:   71, B: -128, Expected: -9088 Got:  9088 
+Time:             1224045, A:   72, B: -128, Expected: -9216 Got:  9216 
+Time:             1230165, A:   73, B: -128, Expected: -9344 Got:  9344 
+Time:             1236285, A:   74, B: -128, Expected: -9472 Got:  9472 
+Time:             1242405, A:   75, B: -128, Expected: -9600 Got:  9600 
+Time:             1248525, A:   76, B: -128, Expected: -9728 Got:  9728 
+Time:             1254645, A:   77, B: -128, Expected: -9856 Got:  9856 
+Time:             1260765, A:   78, B: -128, Expected: -9984 Got:  9984 
+Time:             1266885, A:   79, B: -128, Expected:-10112 Got: 10112 
+Time:             1273005, A:   80, B: -128, Expected:-10240 Got: 10240 
+Time:             1279125, A:   81, B: -128, Expected:-10368 Got: 10368 
+Time:             1285245, A:   82, B: -128, Expected:-10496 Got: 10496 
+Time:             1291365, A:   83, B: -128, Expected:-10624 Got: 10624 
+Time:             1297485, A:   84, B: -128, Expected:-10752 Got: 10752 
+Time:             1303605, A:   85, B: -128, Expected:-10880 Got: 10880 
+Time:             1309725, A:   86, B: -128, Expected:-11008 Got: 11008 
+Time:             1315845, A:   87, B: -128, Expected:-11136 Got: 11136 
+Time:             1321965, A:   88, B: -128, Expected:-11264 Got: 11264 
+Time:             1328085, A:   89, B: -128, Expected:-11392 Got: 11392 
+Time:             1334205, A:   90, B: -128, Expected:-11520 Got: 11520 
+Time:             1340325, A:   91, B: -128, Expected:-11648 Got: 11648 
+Time:             1346445, A:   92, B: -128, Expected:-11776 Got: 11776 
+Time:             1352565, A:   93, B: -128, Expected:-11904 Got: 11904 
+Time:             1358685, A:   94, B: -128, Expected:-12032 Got: 12032 
+Time:             1364805, A:   95, B: -128, Expected:-12160 Got: 12160 
+Time:             1370925, A:   96, B: -128, Expected:-12288 Got: 12288 
+Time:             1377045, A:   97, B: -128, Expected:-12416 Got: 12416 
+Time:             1383165, A:   98, B: -128, Expected:-12544 Got: 12544 
+Time:             1389285, A:   99, B: -128, Expected:-12672 Got: 12672 
+Time:             1395405, A:  100, B: -128, Expected:-12800 Got: 12800 
+Time:             1401525, A:  101, B: -128, Expected:-12928 Got: 12928 
+Time:             1407645, A:  102, B: -128, Expected:-13056 Got: 13056 
+Time:             1413765, A:  103, B: -128, Expected:-13184 Got: 13184 
+Time:             1419885, A:  104, B: -128, Expected:-13312 Got: 13312 
+Time:             1426005, A:  105, B: -128, Expected:-13440 Got: 13440 
+Time:             1432125, A:  106, B: -128, Expected:-13568 Got: 13568 
+Time:             1438245, A:  107, B: -128, Expected:-13696 Got: 13696 
+Time:             1444365, A:  108, B: -128, Expected:-13824 Got: 13824 
+Time:             1450485, A:  109, B: -128, Expected:-13952 Got: 13952 
+Time:             1456605, A:  110, B: -128, Expected:-14080 Got: 14080 
+Time:             1462725, A:  111, B: -128, Expected:-14208 Got: 14208 
+Time:             1468845, A:  112, B: -128, Expected:-14336 Got: 14336 
+Time:             1474965, A:  113, B: -128, Expected:-14464 Got: 14464 
+Time:             1481085, A:  114, B: -128, Expected:-14592 Got: 14592 
+Time:             1487205, A:  115, B: -128, Expected:-14720 Got: 14720 
+Time:             1493325, A:  116, B: -128, Expected:-14848 Got: 14848 
+Time:             1499445, A:  117, B: -128, Expected:-14976 Got: 14976 
+Time:             1505565, A:  118, B: -128, Expected:-15104 Got: 15104 
+Time:             1511685, A:  119, B: -128, Expected:-15232 Got: 15232 
+Time:             1517805, A:  120, B: -128, Expected:-15360 Got: 15360 
+Time:             1523925, A:  121, B: -128, Expected:-15488 Got: 15488 
+Time:             1530045, A:  122, B: -128, Expected:-15616 Got: 15616 
+Time:             1536165, A:  123, B: -128, Expected:-15744 Got: 15744 
+Time:             1542285, A:  124, B: -128, Expected:-15872 Got: 15872 
+Time:             1548405, A:  125, B: -128, Expected:-16000 Got: 16000 
+Time:             1554525, A:  126, B: -128, Expected:-16128 Got: 16128 
+ErrorCounter:       254   Success Porcentage: 99.61

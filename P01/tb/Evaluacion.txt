@@ -1,0 +1,6 @@
+Sobre 85 por las demoras:
+1) El archivo do run.do falla.                                          -10
+2) La señal de valid es incorrecta.                                     -2
+3) Tienen errores en un producto. Archivo anexo.                        -2
+4) Se hicieron modificaciones despues de la fecha de entrega 11May      -0
+5) No divisor de reloj, ni PLL el diseño.                               -5
